@@ -1,1 +1,105 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
 
+body{
+  top-margin: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.headercontainer {
+  text-align: center;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  background-color: #3d4fb8;
+}
+
+.headerelement {
+  flex: 1;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 350;
+  font-style: normal;
+  font-size: 24pt;
+  line-height: 275%;
+  color: white;
+  background-color: #546eff;
+  border: 1px #3d4fb8 solid;
+  cursor: pointer;
+}
+
+.selectedelement {
+  background-color: #3d4fb8;
+}
+
+.animationcontainer {
+  margin: auto;
+  position: relative;
+  border: 3px black;
+  width: 50%;
+  max-width: 500px;
+  min-width: 50px;
+  height: 500px;
+}
+
+.gearrotateclockwise {
+  animation: clockwiserotation 30s infinite linear;
+  position: absolute;
+  left: 37.5%;
+  top: 37.5%;
+  margin-top: -25%;
+  margin-left:-25%;
+  width: 50%;
+}
+
+.gearrotatecounterclockwise {
+  animation: counterclockwiserotation 30s infinite linear;
+  position: absolute;
+  top: 62.5%;
+  left: 62.5%;
+  margin-top: -25%;
+  margin-left:-25%;
+  width: 50%;
+}
+
+@keyframes clockwiserotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes counterclockwiserotation {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.centered {
+  margin: auto;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.robotofont {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.errortext {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40pt;
+}
