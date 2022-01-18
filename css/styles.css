@@ -9,12 +9,11 @@
 }
 
 body{
-  top-margin: 0;
   margin: 0;
   padding: 0;
 }
 
-.headercontainer {
+.header-container {
   text-align: center;
   height: 100px;
   width: 100%;
@@ -22,7 +21,7 @@ body{
   background-color: #3d4fb8;
 }
 
-.headerelement {
+.header-element {
   flex: 1;
   text-align: center;
   font-family: 'Roboto Mono', monospace;
@@ -36,11 +35,11 @@ body{
   cursor: pointer;
 }
 
-.selectedelement {
+.selected-element {
   background-color: #3d4fb8;
 }
 
-.animationcontainer {
+.animation-container {
   margin: auto;
   position: relative;
   border: 3px black;
@@ -50,8 +49,8 @@ body{
   height: 500px;
 }
 
-.gearrotateclockwise {
-  animation: clockwiserotation 30s infinite linear;
+.gear-rotate-clockwise {
+  animation: clockwise-rotation 30s infinite linear;
   position: absolute;
   left: 37.5%;
   top: 37.5%;
@@ -60,8 +59,8 @@ body{
   width: 50%;
 }
 
-.gearrotatecounterclockwise {
-  animation: counterclockwiserotation 30s infinite linear;
+.gear-rotate-counter-clockwise {
+  animation: counter-clockwise-rotation 30s infinite linear;
   position: absolute;
   top: 62.5%;
   left: 62.5%;
@@ -70,7 +69,7 @@ body{
   width: 50%;
 }
 
-@keyframes clockwiserotation {
+@keyframes clockwise-rotation {
   from {
     transform: rotate(0deg);
   }
@@ -79,7 +78,7 @@ body{
   }
 }
 
-@keyframes counterclockwiserotation {
+@keyframes counter-clockwise-rotation {
   from {
     transform: rotate(359deg);
   }
@@ -94,11 +93,11 @@ body{
   margin-top: 10%;
 }
 
-.robotofont {
+.roboto-font {
   font-family: 'Roboto Mono', monospace;
 }
 
-.errortext {
+.error-text {
   font-weight: 700;
   font-style: normal;
   font-size: 40pt;

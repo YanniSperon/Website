@@ -1,5 +1,5 @@
 function changeGearContainerSize() {
-	document.getElementById("gearcontainer").style.height = getWidth(document.getElementById("gearcontainer")) + "px";
+	document.getElementById("gear-container").style.height = getWidth(document.getElementById("gear-container")) + "px";
 }
 function onResize() {
 	changeGearContainerSize();
