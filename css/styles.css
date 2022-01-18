@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   border: 0;
@@ -8,7 +8,7 @@
   background: transparent;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
 }
@@ -23,6 +23,7 @@ body{
 
 .header-element {
   flex: 1;
+  flex-wrap: 1;
   text-align: center;
   font-family: 'Roboto Mono', monospace;
   font-weight: 350;
@@ -74,13 +75,13 @@ body{
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(359deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes counter-clockwise-rotation {
   from {
-    transform: rotate(359deg);
+    transform: rotate(360deg);
   }
   to {
     transform: rotate(0deg);
