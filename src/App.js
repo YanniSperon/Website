@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import Home from './Home';
 import Work from './Work';
 import Contact from './Contact';
+import Project from './Project';
 
 function App() {
   const [data, setData] = useState(null);
@@ -46,8 +47,9 @@ function App() {
         </button>
         <Routes>
           <Route index element={<Home data={data} projects={projects} />} />
-          <Route path="/work" element={<Work projects={projects}/>} />
-          <Route path="/contact" element={<Contact data={data}/>} />
+          <Route path="/work" element={<Work projects={projects} />} />
+          <Route path="/contact" element={<Contact data={data} />} />
+          <Route path="/project/:projectName" element={<Project projects={projects} />} />
         </Routes>
       </BrowserRouter>
     </div>

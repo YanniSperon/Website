@@ -1,6 +1,7 @@
 import './Home.css';
 import './App.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Home({ data, projects }) {
     if (!data) {
@@ -21,7 +22,7 @@ function Home({ data, projects }) {
         <div className="container">
             <h1>Yanni Speron</h1>
             {data.description.map((desc, index) => (
-                <p key={index}>{desc}</p>
+                <p key={index}>{parseDescription(desc)}</p>
             ))}
 
             <h2>Seeking</h2>
@@ -54,7 +55,6 @@ function Home({ data, projects }) {
                         <strong>{edu.degree}</strong> at <a href={edu.link}>{edu.school} in {edu.location}</a>
                         <ul><li>{edu.startCondition}, {edu.endCondition}</li></ul>
                         <ul><li>GPA: {edu.gpa}</li></ul>
-                        
                     </li>
                 ))}
             </ul>
@@ -62,7 +62,9 @@ function Home({ data, projects }) {
             <h2>Favorite Projects</h2>
             <ul>
                 {data.favoriteProjects.map((project, index) => (
-                    <li key={index}>{project}</li>
+                    <li key={index}>
+                        <Link to={`/project/${project}`}>{project}</Link>
+                    </li>
                 ))}
             </ul>
 
@@ -70,7 +72,9 @@ function Home({ data, projects }) {
             <ul>
                 {data.ongoingProjects.map((project, index) => (
                     <li key={index}>
-                        <strong>{project.name}</strong> - {project.status} ({project.privacy})
+                        <Link to={`/project/${project.name}`}>
+                            {project.name} - {project.status} ({project.privacy})
+                        </Link>
                     </li>
                 ))}
             </ul>

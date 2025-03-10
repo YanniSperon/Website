@@ -94,8 +94,9 @@
     {
         "name": "Body Tattoo Battleship",
         "githubURL": "https://github.com/YanniSperon/BodyTattooBattleship",
-        "thumbnailURL": "https://raw.githubusercontent.com/YanniSperon/BodyTattooBattleship/main/Screenshot%20(23).png",
+        "thumbnailURL": "https://github.com/user-attachments/assets/7698b740-53c0-4d67-a13e-659eb35da2a4",
         "pictureURLs": [
+            "https://github.com/user-attachments/assets/7698b740-53c0-4d67-a13e-659eb35da2a4",
             "https://github.com/YanniSperon/Battleship/assets/47045424/2bf7a7ee-1046-4bc4-b086-18817a9aad52",
             "https://github.com/YanniSperon/Battleship/assets/47045424/6d13018b-9b44-46ef-af79-72f10900b41e",
             "https://github.com/YanniSperon/Battleship/assets/47045424/6c1fcaf1-e2a5-49e7-b649-dfd9eb3e9d66",
@@ -108,6 +109,7 @@
             "https://github.com/YanniSperon/Battleship/assets/47045424/5153d718-5331-4fb1-b402-cca55d8d2f68"
         ],
         "pictureDescriptions": [
+            "An example of where the device prototype could go for example.",
             "The main menu of the game.",
             "Searching for a game on the main menu.",
             "The game board during the ship placing phase.",
@@ -181,34 +183,34 @@
         ],
         "relatedProjects": [
             "Group Messenger",
-            "Body Tattoo Battleship",
+            "Online Battleship",
             "Smart Bike Helmet"
         ],
         "relatedProjectHints": [
             "Networking server and client code used as a jumping off point and greatly changed.",
-            "Entire project forked into a new repository and modified to support no mouse controls. Created for a wearable technology demo demonstrating the usability of a capacitive touch sensor based body-tattoo.",
+            "The project that this project forked, includes mouse controls.",
             "Another wearable piece of technology developed around a similar time."
         ]
     },
     {
         "name": "Group Messenger",
         "githubURL": "https://github.com/YanniSperon/MessagingApp",
+        "thumbnailURL": "https://github.com/user-attachments/assets/3ac8cd5f-3089-4eb9-86d6-1ab2fef9e3ec",
         "pictureURLs": [
-            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(1).png",
-            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(2).png",
-            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(3).png",
-            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(4).png",
-            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(5).png",
-            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(6).png",
-            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(7).png",
-            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(8).png",
-            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(9).png",
-            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(10).png",
-            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(11).png",
-            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(12).png",
-            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(13).png",
-            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(14).png"
-        ],
+            "https://github.com/user-attachments/assets/62518e96-b1ff-4cae-8fb4-6514d87ef108",
+            "https://github.com/user-attachments/assets/e8705bda-7353-464a-bd1f-e81638977af8",
+            "https://github.com/user-attachments/assets/3ac8cd5f-3089-4eb9-86d6-1ab2fef9e3ec",
+            "https://github.com/user-attachments/assets/7dde3732-a61b-4ddb-83b2-6f9cda6e1906",
+            "https://github.com/user-attachments/assets/bd161ec2-7074-4426-8251-616737a8e4e7",
+            "https://github.com/user-attachments/assets/f3f9ee7d-d533-4c9a-b7b4-54048b635b61",
+            "https://github.com/user-attachments/assets/c123cbee-f359-48a7-a4c6-7b74cafb2166",
+            "https://github.com/user-attachments/assets/60f6e663-591a-4633-8d39-ba3f76667ba3",
+            "https://github.com/user-attachments/assets/fa379a9c-3f4d-403b-bf0d-d9328dba7b21",
+            "https://github.com/user-attachments/assets/d0e5431d-b2e3-457f-b492-ae9ec6317b61",
+            "https://github.com/user-attachments/assets/e9462c56-c90a-4fb4-9693-933c8ea1d1d9",
+            "https://github.com/user-attachments/assets/986922e7-9688-4e5c-b9ff-9d76af6a76c5",
+            "https://github.com/user-attachments/assets/f1b96532-dcae-4c55-815a-5dc7004ec280",
+            "https://github.com/user-attachments/assets/b40ccf3c-c4a5-47bf-bc8a-314f67b66244"],
         "pictureDescriptions": [
             "The login screen of the desktop application.",
             "The global chat.",
@@ -269,14 +271,18 @@
     {
         "name": "Professional Website Portfolio",
         "githubURL": "https://github.com/YanniSperon/Website",
+        "thumbnailURL": "https://github.com/user-attachments/assets/bfb49a1c-dd65-4f8d-b7c5-a75af10453d9",
         "pictureURLs": [],
         "pictureDescriptions": [],
         "description": "A hand-written professional website portfolio made in React",
         "components": [
-            ""
+            "React frontend",
+            "Responsive",
+            "Mobile friendly",
+            "Supports dark mode and light mode"
         ],
-        "projectStart": "2024-04-24",
-        "projectEnd": "2024-05-07",
+        "projectStart": "2025-03-05",
+        "projectEnd": "2025-03-10",
         "primaryLanguages": [
             "JavaScript",
             "JSX",
@@ -371,10 +377,16 @@
         "githubURL": "https://github.com/YanniSperon/Legacy-Atlas-Engine",
         "pictureURLs": [],
         "pictureDescriptions": [],
-        "description": "The original Atlas Game Engine that was written .",
-        "components": [],
-        "projectStart": "2025-02-24",
-        "projectEnd": "Present",
+        "description": "This project was a self-directed learning experience in C++ and OpenGL, developed between October and December 2019. The primary goal was to build a functional 3D rendering engine while gaining hands-on experience with graphics programming. The project served as a foundational step in understanding graphics programming and game engine development, completed within the self-imposed deadline of a high school semester.",
+        "components": [
+            "Blinn-Phong lighting model implemented for rudimentary realistic shading.",
+            "Bullet physics integration for dynamic object interactions and 3D environment simulation.",
+            "A custom scene editor designed for quick and easy methods to create, manipulate, and save 3D scenes.",
+            "Multithreaded 3D model loader for efficient scene loading and rendering.",
+            "Post-processing shader effects for bloom and other filtering effects."
+        ],
+        "projectStart": "2019-10-10",
+        "projectEnd": "2019-12-06",
         "primaryLanguages": [
             "C++",
             "GLSL"
@@ -400,15 +412,16 @@
             "The build system used to manage dependencies and generate project files for cross-platform development."
         ],
         "relatedProjects": [
-            "Atlas Game Engine"
+            "Fractyne"
         ],
         "relatedProjectHints": [
-            "A game engine that was written from scratch and along the way I learned the shader functionality employed in this project."
+            "A standalone shader tool that is utilizing the knowledge I gained from this project."
         ]
     },
     {
         "name": "Fractyne",
         "githubURL": "",
+        "thumbnailURL": "https://github.com/user-attachments/assets/e8ad19ac-e1e2-4f67-84ef-171df52a88c1",
         "pictureURLs": [],
         "pictureDescriptions": [],
         "description": "A standalone shader tool application currently a work in progress.",
@@ -445,5 +458,34 @@
         "relatedProjectHints": [
             "A game engine that was written from scratch and along the way I learned the shader functionality employed in this project."
         ]
+    },
+    {
+        "name": "Many More Already Completed",
+        "githubURL": "",
+        "thumbnailURL": "",
+        "pictureURLs": [],
+        "pictureDescriptions": [],
+        "description": "Soon to be added, lots of projects have already been completed and have had hundreds of hours sunk into them. It is just a matter of writing the descriptions, formatting the JSON, and loading them into the website's database.",
+        "components": [],
+        "projectStart": "2020-01-01",
+        "projectEnd": "Present",
+        "primaryLanguages": [
+            "C++",
+            "GLSL",
+            "Python",
+            "MySQL",
+            "Java",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "Swift",
+            "More..."
+        ],
+        "frameworks": [],
+        "frameworkHints": [],
+        "tools": [],
+        "toolHints": [],
+        "relatedProjects": [],
+        "relatedProjectHints": []
     }
 ]

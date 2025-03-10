@@ -24,6 +24,7 @@ function Work({ projects }) {
                                     backgroundPosition: 'center',
                                 }}
                             >
+                                <div className="blurCover"></div>
                                 <div className="project-content">
                                     <h2>{project.name}</h2>
                                 </div>

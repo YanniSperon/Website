@@ -43,6 +43,18 @@ p {
     margin: 1em 0;
 }
 
+.contactInfoLabel {
+    text-align: center;
+}
+
+.projectDescription {
+    text-align: justify;
+}
+
+.material-icons {
+    vertical-align: middle;
+}
+
 .ResumeButton {
     background-color: #2980b9;
     color: white;
@@ -69,14 +81,16 @@ p {
     background-color: #1a5276;
 }
 
+em {
+    line-height:inherit;
+}
+
 a {
     text-decoration: none;
-    color: #2980b9;
 }
 
 a:hover {
     text-decoration: underline;
-    color: #1a5276;
 }
 
 .container {
@@ -89,6 +103,84 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 1em;
+}
+
+.project-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.slideshow-image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-description {
+    margin-top: 0.5em;
+    font-size: 1em;
+    color: #666;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.project-details {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.github-link {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.75em 1.5em;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.github-link:hover {
+    background-color: #555;
 }
 
 @media (max-width: 600px) {
@@ -144,5 +236,13 @@ a:hover {
 
 .dark-mode .ResumeButton:hover {
     background-color: #3700b3;
-    color: #e0e0e0;
+}
+
+.dark-mode .github-link {
+    background-color: #bb86fc;
+    color: #121212;
+}
+
+.dark-mode .github-link:hover {
+    background-color: #3700b3;
 }

@@ -10,7 +10,7 @@ function Contact({ data }) {
 
     return (
         <div className="container">
-            <h1>Contact Information</h1>
+            <h1 className="contactInfoLabel">Contact Information</h1>
             <div className="button-container">
                 <a href={`mailto:${email}`} className="ContactButton">
                     <button className="ResumeButton">
