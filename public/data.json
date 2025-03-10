@@ -1,0 +1,122 @@
+{
+    "description": [
+        "I am a versatile and driven Computer Science professional based in Chicago, IL, with a strong passion for software engineering and problem-solving. I am on track to graduate in May 2025 with a B.S. in Computer Science from the University of Illinois at Chicago, where I maintain a 3.70 GPA. Before transferring, I studied at Michigan State University, earning a 3.83 GPA.",
+        "With expertise in multiple programming languages, software development frameworks, and game development technologies, I am always eager to expand my skill set and explore new areas of technology, including deep learning, financial systems, and large-scale software architecture. My experience spans research, freelancing, game development, and industry-level projects, giving me a strong foundation in adapting to new challenges and delivering effective solutions.",
+        "One of my most rewarding experiences was working as a Junior Associate Software Engineer at NetherRealm Studios, where I contributed to the development of *Mortal Kombat 1*. Seeing my name in the game’s credits was a defining moment that highlighted the dedication, collaboration, and problem-solving required to bring such a large-scale project to life. This experience reinforced my passion for software engineering and my commitment to building high-performance, impactful systems.",
+        "I thrive in fast-paced, collaborative environments where I can apply my technical expertise, solve real-world challenges, and continue learning. My curiosity, adaptability, and drive to push the boundaries of innovation fuel my passion for software development. I am excited to bring my skills, problem-solving abilities, and enthusiasm to a team that values creativity, excellence, and technological growth."
+    ],
+    "education": [
+        {
+            "degree": "B.S. in Computer Science",
+            "school": "University of Illinois at Chicago",
+            "link": "https://www.uic.edu/",
+            "location": "Chicago, IL",
+            "startCondition": "Started January 2023",
+            "endCondition": "Graduating May 2025",
+            "gpa": "3.70/4.0"
+        },
+        {
+            "degree": "Computer Science",
+            "school": "Michigan State University",
+            "link": "https://msu.edu/",
+            "location": "East Lansing, MI",
+            "startCondition": "Started August 2020",
+            "endCondition": "Transferred May 2022",
+            "gpa": "3.83/4.0"
+        }
+    ],
+    "employment": [
+        {
+            "title": "Research Software Engineer",
+            "company": "UIC WTSE",
+            "link": "https://esmailbeigi.lab.uic.edu/",
+            "location": "Chicago, IL",
+            "startCondition": "November 2024",
+            "endCondition": "Present",
+            "hours": "Part-time (10 to 20 hours weekly) alongside school.",
+            "description": [
+                "Collaborated across interdisciplinary teams, including healthcare, engineering, and design in the University of Illinois at Chicago Wearable Technology and Sensory Enhancement Laboratory.",
+                "Worked as a full-stack software engineer, utilizing C, Python, JavaScript, and HTML to build functional prototypes and research tools designed around accessibility and connectivity.",
+                "Designed and developed a wearable solution to diagnose and rehabilitate the impeded communication of stroke patients using an oral embedded device with Bluetooth Low Energy (BLE) connectivity."
+            ]
+        },
+        {
+            "title": "Freelance Software Developer",
+            "company": "GetYourThing, Inc.",
+            "link": "https://getyourthing.com/",
+            "location": "Niles, Illinois",
+            "startCondition": "November 2022",
+            "endCondition": "November 2024",
+            "hours": "Part-time (20 to 30 hours weekly) alongside school.",
+            "description": [
+                "Collaborated with clients, artists, and developers while leading full-stack iOS development of two internal tools using Swift, UIKit, SpriteKit, and SceneKit.",
+                "Developed a private RESTful API in Node.js connected to an SQL database.",
+                "Created internal data manipulation tools in Python using SQLite3."
+            ]
+        },
+        {
+            "title": "Junior Associate Software Engineer",
+            "company": "NetherRealm Studios",
+            "link": "https://www.netherrealm.com/",
+            "location": "Chicago, IL",
+            "startCondition": "August 2021",
+            "endCondition": "June 2022",
+            "hours": "Full-time (30 to 40 hours weekly) alongside school.",
+            "description": [
+                "Worked on *Mortal Kombat 1* at a Warner Bros. Games subsidiary.",
+                "Designed new features, debugged systems, and worked alongside industry professionals on a massive C++ codebase in Unreal Engine 4 using JIRA and Perforce to stay organized.",
+                "Participated in Scrum-based Agile development, attending daily stand-ups, sprint planning meetings, and code reviews to ensure smooth feature development and timely bug fixes."            
+            ]
+        },
+        {
+            "title": "Software Engineering Intern",
+            "company": "UIUC HCESC",
+            "link": "https://healtheng.illinois.edu/",
+            "location": "Urbana-Champaign, IL",
+            "startCondition": "May 2021",
+            "endCondition": "July 2021",
+            "hours": "Full-time (40 hours weekly).",
+            "description": [
+                "Lead developer on a Unity-based spaying simulation for veterinary students, working with designers, artists, and experts at the University of Illinois at Urbana-Champaign College of Veterinary Medicine in partnership with the University of Illinois at Urbana-Champaign Health Care Engineering Systems Center."
+            ]
+        },
+        {
+            "title": "IT Manager",
+            "company": "Park Ridge Medical Spa",
+            "link": "https://www.prplastic.com/parkridgespa/",
+            "location": "Park Ridge, IL",
+            "startCondition": "December 2019",
+            "endCondition": "July 2023",
+            "hours": "Part-time (10 hours weekly) alongside school.",
+            "description": [
+                "Installed and configured software, routed and terminated ethernet cables, and set up security system."
+            ]
+        }
+    ],
+    "seeking": [
+        "Full-time software engineering roles in Chicago, IL, starting in May 2025.",
+        "Opportunities in high-performance computing, low-latency systems, and large-scale software architecture, leveraging deep expertise in C++ and systems-level programming."
+    ],
+    "favoriteProjects": [
+        "Online Battleship",
+        "Smart Bike Helmet",
+        "Atlas Game Engine",
+        "Fractyne"
+    ],
+    "ongoingProjects": [
+        {
+            "name": "Professional Website Portfolio",
+            "privacy": "Public",
+            "status": "In Progress"
+        },
+        {
+            "name": "Fractyne",
+            "privacy": "Confidential",
+            "status": "In Progress"
+        }
+    ],
+    "contactInfo": {
+        "email": "yannisperon@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/yanni-speron/"
+    }
+}

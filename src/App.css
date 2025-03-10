@@ -1,6 +1,19 @@
+* {
+  text-align: justify;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12pt;
+  line-height: 275%;
+  cursor: default;
+}
+
+em {
+  font-style: italic;
+}
+
 .App {
   text-align: center;
-  background-color: #e9e9e9;
   width: 100%;
   height: 100%;
 }
@@ -27,4 +40,44 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 1em;
+  left: 1em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2em;
+  color: inherit;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .App-header {
+  color: #e0e0e0;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+
+  .App-header {
+    color: #e0e0e0;
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+.material-icons {
+  cursor: pointer;
 }

@@ -1,0 +1,449 @@
+[
+    {
+        "name": "Online Battleship",
+        "githubURL": "https://github.com/YanniSperon/Battleship",
+        "thumbnailURL": "https://github.com/YanniSperon/Battleship/assets/47045424/2bf7a7ee-1046-4bc4-b086-18817a9aad52",
+        "pictureURLs": [
+            "https://github.com/YanniSperon/Battleship/assets/47045424/2bf7a7ee-1046-4bc4-b086-18817a9aad52",
+            "https://github.com/YanniSperon/Battleship/assets/47045424/6d13018b-9b44-46ef-af79-72f10900b41e",
+            "https://github.com/YanniSperon/Battleship/assets/47045424/6c1fcaf1-e2a5-49e7-b649-dfd9eb3e9d66",
+            "https://github.com/YanniSperon/Battleship/assets/47045424/b5d2101b-803c-4eec-9c79-aaef983abf09",
+            "https://github.com/YanniSperon/Battleship/assets/47045424/0c598dd5-1b9d-4cc7-b6fc-a626c7a46fa7",
+            "https://github.com/YanniSperon/Battleship/assets/47045424/bcc56b1b-46df-4d61-82da-67f32f3e5379",
+            "https://github.com/YanniSperon/Battleship/assets/47045424/43344698-ba0e-430c-8064-c3689b79dc79",
+            "https://github.com/YanniSperon/Battleship/assets/47045424/d9aa4640-156d-45a9-b2c6-f75c91bcbb28",
+            "https://github.com/YanniSperon/Battleship/assets/47045424/f1d5fc6e-d78f-4d0b-87dd-1773c0b1823b",
+            "https://github.com/YanniSperon/Battleship/assets/47045424/5153d718-5331-4fb1-b402-cca55d8d2f68"
+        ],
+        "pictureDescriptions": [
+            "The main menu of the game.",
+            "Searching for a game on the main menu.",
+            "The game board during the ship placing phase.",
+            "The game board while waiting for the opponent to finish placing their ships.",
+            "The game board during the opponent's turn.",
+            "The camera rotating around the game board to demonstrate 3D capabilities.",
+            "The game board during the player's turn after many turns.",
+            "The defeat screen after losing a game.",
+            "The victory screen after winning a game.",
+            "The main menu after gaining experience points and being halfway to a level-up."
+        ],
+        "description": "An online 3D Battleship server and client written in Java using JavaFX utilizing Java sockets. Features a public game finder, as well as the ability to play against an algorithm.",
+        "components": [
+            "A custom entity-component-system written on top of JavaFX's very limited 3D capabilities.",
+            "A custom mesh, material, and texture loader.",
+            "A custom OBJ animation loader.",
+            "A fully featured 3D camera system with zoom, pan, and rotate capabilities.",
+            "A game settings menu with volume sliders.",
+            "Ray-based selection and collision detection for selecting 3D objects.",
+            "Fully replicated networking with multithreading and raw Java sockets.",
+            "Online matchmaking with a public game finder.",
+            "An AI algorithm to play against.",
+            "Fully custom designed art, 3D models, and textures.",
+            "Professional music and sound effects.",
+            "A level-up system based on games won.",
+            "An aesthetically pleasing victory and defeat screen accompanied with fitting music."
+        ],
+        "incompleteComponents": [
+            "Modern graphics and shading",
+            "A game chat and replay system.",
+            "A private game system.",
+            "A friends system.",
+            "A ranked system.",
+            "A game statistics system."
+        ],
+        "projectStart": "2024-04-24",
+        "projectEnd": "2024-05-07",
+        "primaryLanguages": [
+            "Java",
+            "FXML",
+            "CSS"
+        ],
+        "frameworks": [
+            "JavaFX",
+            "JavaFX Media",
+            "JavaFX 3D API",
+            "Java Networking API"
+        ],
+        "frameworkHints": [
+            "The core functionality of the 2D user interface and FXML functionality.",
+            "The core audio functionality for background music (MediaPlayer) and sound effects (AudioClip).",
+            "The core functionality of extremely basic 3D rendering, capable of rendering primitive shapes with per-vertex Phong shading.",
+            "The core networking features for sending and receiving basic messages over raw Java Sockets."
+        ],
+        "tools": [
+            "IntelliJ IDEA",
+            "Blender",
+            "Adobe Photoshop",
+            "Maven"
+        ],
+        "toolHints": [
+            "The primary IDE used for development.",
+            "The primary 3D modeling software used for creating 3D models.",
+            "The primary image editing software used for creating textures and GUI elements.",
+            "The primary build automation tool used for managing dependencies and building the project."
+        ],
+        "relatedProjects": [
+            "Group Messenger",
+            "Body Tattoo Battleship"
+        ],
+        "relatedProjectHints": [
+            "Networking server and client code used as a jumping off point and greatly changed.",
+            "Entire project forked into a new repository and modified to support no mouse controls. Created for a wearable technology demo demonstrating the usability of a capacitive touch sensor based body-tattoo."
+        ]
+    },
+    {
+        "name": "Body Tattoo Battleship",
+        "githubURL": "https://github.com/YanniSperon/BodyTattooBattleship",
+        "thumbnailURL": "https://raw.githubusercontent.com/YanniSperon/BodyTattooBattleship/main/Screenshot%20(23).png",
+        "pictureURLs": [
+            "https://github.com/YanniSperon/Battleship/assets/47045424/2bf7a7ee-1046-4bc4-b086-18817a9aad52",
+            "https://github.com/YanniSperon/Battleship/assets/47045424/6d13018b-9b44-46ef-af79-72f10900b41e",
+            "https://github.com/YanniSperon/Battleship/assets/47045424/6c1fcaf1-e2a5-49e7-b649-dfd9eb3e9d66",
+            "https://github.com/YanniSperon/Battleship/assets/47045424/b5d2101b-803c-4eec-9c79-aaef983abf09",
+            "https://github.com/YanniSperon/Battleship/assets/47045424/0c598dd5-1b9d-4cc7-b6fc-a626c7a46fa7",
+            "https://github.com/YanniSperon/Battleship/assets/47045424/bcc56b1b-46df-4d61-82da-67f32f3e5379",
+            "https://github.com/YanniSperon/Battleship/assets/47045424/43344698-ba0e-430c-8064-c3689b79dc79",
+            "https://github.com/YanniSperon/Battleship/assets/47045424/d9aa4640-156d-45a9-b2c6-f75c91bcbb28",
+            "https://github.com/YanniSperon/Battleship/assets/47045424/f1d5fc6e-d78f-4d0b-87dd-1773c0b1823b",
+            "https://github.com/YanniSperon/Battleship/assets/47045424/5153d718-5331-4fb1-b402-cca55d8d2f68"
+        ],
+        "pictureDescriptions": [
+            "The main menu of the game.",
+            "Searching for a game on the main menu.",
+            "The game board during the ship placing phase.",
+            "The game board while waiting for the opponent to finish placing their ships.",
+            "The game board during the opponent's turn.",
+            "The camera rotating around the game board to demonstrate 3D capabilities.",
+            "The game board during the player's turn after many turns.",
+            "The defeat screen after losing a game.",
+            "The victory screen after winning a game.",
+            "The main menu after gaining experience points and being halfway to a level-up."
+        ],
+        "description": "An online 3D Battleship server and client written in Java using JavaFX utilizing Java sockets. Features a public game finder, as well as the ability to play against an algorithm. Implements a wearable technology demo using a capacitive touch sensor based body-tattoo.",
+        "components": [
+            "A custom entity-component-system written on top of JavaFX's very limited 3D capabilities.",
+            "A custom mesh, material, and texture loader.",
+            "A custom OBJ animation loader.",
+            "Integrates with Processing to read capacitive touch sensor data from Arduino, dispatch it to the Battleship client, and send messages to the server.",
+            "A fully featured 3D camera system with zoom, pan, and rotate capabilities.",
+            "A game settings menu with volume sliders.",
+            "Ray-based selection and collision detection for selecting 3D objects.",
+            "Fully replicated networking with multithreading and raw Java sockets.",
+            "Online matchmaking with a public game finder.",
+            "An AI algorithm to play against.",
+            "Fully custom designed art, 3D models, and textures.",
+            "Professional music and sound effects.",
+            "A level-up system based on games won.",
+            "An aesthetically pleasing victory and defeat screen accompanied with fitting music."
+        ],
+        "incompleteComponents": [
+            "Modern graphics and shading",
+            "A game chat and replay system.",
+            "A private game system.",
+            "A friends system.",
+            "A ranked system.",
+            "A game statistics system."
+        ],
+        "projectStart": "2024-10-24",
+        "projectEnd": "2024-10-30",
+        "primaryLanguages": [
+            "Java",
+            "FXML",
+            "CSS"
+        ],
+        "frameworks": [
+            "JavaFX",
+            "JavaFX Media",
+            "JavaFX 3D API",
+            "Java Networking API",
+            "Processing"
+        ],
+        "frameworkHints": [
+            "The core functionality of the 2D user interface and FXML functionality.",
+            "The core audio functionality for background music (MediaPlayer) and sound effects (AudioClip).",
+            "The core functionality of extremely basic 3D rendering, capable of rendering primitive shapes with per-vertex Phong shading.",
+            "The core networking features for sending and receiving basic messages over raw Java Sockets.",
+            "The framework that is used to read capacitive touch sensor data from an Arduino and dispatch it to the Battleship client."
+        ],
+        "tools": [
+            "IntelliJ IDEA",
+            "Blender",
+            "Adobe Photoshop",
+            "Maven",
+            "Processing IDE"
+        ],
+        "toolHints": [
+            "The primary IDE used for development.",
+            "The primary 3D modeling software used for creating 3D models.",
+            "The primary image editing software used for creating textures and GUI elements.",
+            "The primary build automation tool used for managing dependencies and building the project.",
+            "The IDE used to develop the Processing sketch that reads capacitive touch sensor data from an Arduino and dispatches it to the Battleship client."
+        ],
+        "relatedProjects": [
+            "Group Messenger",
+            "Body Tattoo Battleship",
+            "Smart Bike Helmet"
+        ],
+        "relatedProjectHints": [
+            "Networking server and client code used as a jumping off point and greatly changed.",
+            "Entire project forked into a new repository and modified to support no mouse controls. Created for a wearable technology demo demonstrating the usability of a capacitive touch sensor based body-tattoo.",
+            "Another wearable piece of technology developed around a similar time."
+        ]
+    },
+    {
+        "name": "Group Messenger",
+        "githubURL": "https://github.com/YanniSperon/MessagingApp",
+        "pictureURLs": [
+            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(1).png",
+            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(2).png",
+            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(3).png",
+            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(4).png",
+            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(5).png",
+            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(6).png",
+            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(7).png",
+            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(8).png",
+            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(9).png",
+            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(10).png",
+            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(11).png",
+            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(12).png",
+            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(13).png",
+            "https://github.com/YanniSperon/MessagingApp/blob/main/MessagingAppClient/assets/Screenshot%20(14).png"
+        ],
+        "pictureDescriptions": [
+            "The login screen of the desktop application.",
+            "The global chat.",
+            "Creating a public group.",
+            "The newly created public group displayed in the group list.",
+            "Another user viewing and messaging in the new public group.",
+            "A direct message between two users as viewed by Bob.",
+            "A direct message between two users as viewed by Jim.",
+            "Creating a private group.",
+            "The new private group as viewed by Jim.",
+            "The new private group as viewed by Bob.",
+            "The inaccessible private group as viewed by Darren.",
+            "The groups and log as viewed from the server user interface.",
+            "The DM between Jim and Bob as viewed from the server user interface.",
+            "The private group as viewed from the server user interface."
+        ],
+        "description": "An online chat messaging application client and server client written in Java using JavaFX utilizing Java sockets.",
+        "components": [
+            "A custom entity-component-system written on top of JavaFX's very limited 3D capabilities.",
+            "A custom mesh, material, and texture loader.",
+            "A custom OBJ animation loader.",
+            "Fully replicated networking with multithreading and raw Java sockets.",
+            "Fully custom designed art, 3D models, and textures.",
+            "Professional music and sound effects.",
+            "A level-up system based on games won.",
+            "An aesthetically pleasing victory and defeat screen accompanied with fitting music."
+        ],
+        "projectStart": "2024-04-18",
+        "projectEnd": "2024-04-20",
+        "primaryLanguages": [
+            "Java"
+        ],
+        "frameworks": [
+            "JavaFX",
+            "Java Networking API"
+        ],
+        "frameworkHints": [
+            "The core functionality of the 2D user interface.",
+            "The core networking features for sending and receiving basic messages over raw Java Sockets."
+        ],
+        "tools": [
+            "IntelliJ IDEA",
+            "Maven"
+        ],
+        "toolHints": [
+            "The primary IDE used for development.",
+            "The primary build automation tool used for managing dependencies and building the project."
+        ],
+        "relatedProjects": [
+            "Online Battleship",
+            "Body Tattoo Battleship"
+        ],
+        "relatedProjectHints": [
+            "An online Battleship client and server that built upon the networking code written for this application.",
+            "Battleship project forked into a new repository and modified to support no mouse controls. Created for a wearable technology demo demonstrating the usability of a capacitive touch sensor based body-tattoo."
+        ]
+    },
+    {
+        "name": "Professional Website Portfolio",
+        "githubURL": "https://github.com/YanniSperon/Website",
+        "pictureURLs": [],
+        "pictureDescriptions": [],
+        "description": "A hand-written professional website portfolio made in React",
+        "components": [
+            ""
+        ],
+        "projectStart": "2024-04-24",
+        "projectEnd": "2024-05-07",
+        "primaryLanguages": [
+            "JavaScript",
+            "JSX",
+            "HTML",
+            "CSS"
+        ],
+        "frameworks": [
+            "React",
+            "React Router",
+            "Apollo Client (Pending)"
+        ],
+        "frameworkHints": [
+            "The core of the web page.",
+            "Simplifying some features like switching pages.",
+            "Planned GraphQL integration with GitHub and LinkedIn."
+        ],
+        "tools": [
+            "Visual Studio Code",
+            "NPM"
+        ],
+        "toolHints": [
+            "The primary IDE used for development.",
+            "The primary build automation tool used for managing dependencies and building the project."
+        ],
+        "relatedProjects": [],
+        "relatedProjectHints": []
+    },
+    {
+        "name": "Smart Bike Helmet",
+        "githubURL": "https://github.com/YanniSperon/MessagingApp",
+        "thumbnailURL": "https://github.com/user-attachments/assets/a92e75af-dde9-40c6-9b60-426cdb0552a9",
+        "pictureURLs": [
+            "https://github.com/user-attachments/assets/a92e75af-dde9-40c6-9b60-426cdb0552a9",
+            "https://github.com/user-attachments/assets/d2246dee-c9dd-432f-9d29-4b6bf3668ff6",
+            "https://github.com/user-attachments/assets/f8c8e5cc-2af8-46a0-9595-9450054b1b91",
+            "https://github.com/user-attachments/assets/121f16d2-9310-47fd-874c-8d7574b2d931",
+            "https://github.com/user-attachments/assets/9343b888-01a7-471d-a462-3c02a345d5db",
+            "https://github.com/user-attachments/assets/232cb0a8-8227-4c8a-a467-6a37bd2df9d8",
+            "https://github.com/user-attachments/assets/87baa803-009a-4911-bde0-78982a22b7e5",
+            "https://github.com/user-attachments/assets/21347ced-aa1c-42ec-b6c9-84b7137c3fdd"
+        ],
+        "pictureDescriptions": [
+            "The prototype helmet prior to bundling of the electronics.",
+            "The back of the prototype helmet prior to bundling of the electronics.",
+            "The prototype optional glove mounted electronic component.",
+            "The wiring of the helmet Arduino/sensors and the glove Arduino/sensors.",
+            "A mock up of the planned user interface showing blinking of a turn signal.",
+            "A mock up of the planned user interface with a crash notification based on gyroscopic sensors.",
+            "A mock up of the screen when \"Yes\" is selected in the previous page.",
+            "A mock up of the settings screen to disable SOS (crash) notifications."
+        ],
+        "description": "This prototype smart helmet system adds turn signals to a bike helmet, controllable via hand gestures (with an optional glove) or helmet motion (via an accelerometer). It is designed to work alongside an iOS app for additional functionality.",
+        "components": [
+            "Arduino-based system controlling turn signals via motion and gesture inputs.",
+            "Glove component with sensors to detect hand gestures for signal activation.",
+            "Helmet accelerometer to detect head movements for automated signal control.",
+            "iOS app built with SceneKit, UIKit, and Swift for expanded functionality.",
+            "All hardware and software were developed and wired by Yanni Speron."
+        ],
+        "projectStart": "2024-11-21",
+        "projectEnd": "2024-12-05",
+        "primaryLanguages": [
+            "C++",
+            "Swift"
+        ],
+        "frameworks": [
+            "Core Bluetooth",
+            "SceneKit",
+            "UIKit"
+        ],
+        "frameworkHints": [
+            "The core functionality of the 2D user interface.",
+            "The core networking features for sending and receiving basic messages over raw Java Sockets."
+        ],
+        "tools": [
+            "Arduino IDE",
+            "XCode"
+        ],
+        "toolHints": [
+            "The primary IDE used for the microcontroller development, used ot manage dependencies and build the project.",
+            "The primary IDE used for the iOS development, used to manage dependencies and build the project."
+        ],
+        "relatedProjects": [
+            "Body Tattoo Battleship"
+        ],
+        "relatedProjectHints": [
+            "Another wearable piece of technology developed around a similar time."
+        ]
+    },
+    {
+        "name": "Atlas Game Engine",
+        "githubURL": "https://github.com/YanniSperon/Legacy-Atlas-Engine",
+        "pictureURLs": [],
+        "pictureDescriptions": [],
+        "description": "The original Atlas Game Engine that was written .",
+        "components": [],
+        "projectStart": "2025-02-24",
+        "projectEnd": "Present",
+        "primaryLanguages": [
+            "C++",
+            "GLSL"
+        ],
+        "frameworks": [
+            "OpenGL",
+            "FreeType",
+            "GLFW",
+            "GLEW"
+        ],
+        "frameworkHints": [
+            "The core rendering/shading functionality.",
+            "Used to load OpenGL functions.",
+            "The core user interface and audio processing functionality.",
+            "Basic optimized mathematics functionality."
+        ],
+        "tools": [
+            "Visual Studio 2022",
+            "CMake"
+        ],
+        "toolHints": [
+            "The primary IDE used for application development in C++, including OpenGL and JUCE projects.",
+            "The build system used to manage dependencies and generate project files for cross-platform development."
+        ],
+        "relatedProjects": [
+            "Atlas Game Engine"
+        ],
+        "relatedProjectHints": [
+            "A game engine that was written from scratch and along the way I learned the shader functionality employed in this project."
+        ]
+    },
+    {
+        "name": "Fractyne",
+        "githubURL": "",
+        "pictureURLs": [],
+        "pictureDescriptions": [],
+        "description": "A standalone shader tool application currently a work in progress.",
+        "components": [],
+        "projectStart": "2025-02-24",
+        "projectEnd": "Present",
+        "primaryLanguages": [
+            "C++",
+            "GLSL"
+        ],
+        "frameworks": [
+            "OpenGL",
+            "GLAD",
+            "JUCE",
+            "GLM"
+        ],
+        "frameworkHints": [
+            "The core rendering/shading functionality.",
+            "Used to load OpenGL functions.",
+            "The core user interface and audio processing functionality.",
+            "Basic optimized mathematics functionality."
+        ],
+        "tools": [
+            "Visual Studio 2022",
+            "CMake"
+        ],
+        "toolHints": [
+            "The primary IDE used for application development in C++, including OpenGL and JUCE projects.",
+            "The build system used to manage dependencies and generate project files for cross-platform development."
+        ],
+        "relatedProjects": [
+            "Atlas Game Engine"
+        ],
+        "relatedProjectHints": [
+            "A game engine that was written from scratch and along the way I learned the shader functionality employed in this project."
+        ]
+    }
+]
