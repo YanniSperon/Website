@@ -4,18 +4,21 @@ import { Link } from 'react-router-dom';
 
 function Work({ projects }) {
     if (!projects || projects.length === 0) {
-        return <div>Loading...</div>;
+        return <div className="work-container">
+            <h1 className='projectsTitle'>Loading...</h1>;
+        </div>
     }
 
     return (
         <div className="work-container">
             <h1 className="projectsTitle">Projects</h1>
             <div className="grid-container">
-                {projects.map((project, index) => {
-                    const backgroundImage = project.thumbnailURL ? `url(${project.thumbnailURL})` : 'none';
-
+                {Object.entries(projects).map(([k, v]) => {
+                    console.log(k);
+                    const backgroundImage = v.thumbnailURL ? `url(${v.thumbnailURL})` : 'none';
+                    
                     return (
-                        <Link to={`/project/${project.name}`} key={index} className="grid-item">
+                        <Link to={`/project/${k}`} key={k} className="grid-item">
                             <div
                                 className="project-card"
                                 style={{
@@ -26,7 +29,7 @@ function Work({ projects }) {
                             >
                                 <div className="blurCover"></div>
                                 <div className="project-content">
-                                    <h2>{project.name}</h2>
+                                    <h2>{k}</h2>
                                 </div>
                             </div>
                         </Link>

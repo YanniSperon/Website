@@ -98,7 +98,7 @@
         "Opportunities in high-performance computing, low-latency systems, and large-scale software architecture, leveraging deep expertise in C++ and systems-level programming."
     ],
     "favoriteProjects": [
-        "Online Battleship",
+        "Networked Battleship",
         "Smart Bike Helmet",
         "Atlas Game Engine",
         "Fractyne"
@@ -117,6 +117,7 @@
     ],
     "contactInfo": {
         "email": "yannisperon@gmail.com",
-        "linkedin": "https://www.linkedin.com/in/yanni-speron/"
+        "linkedin": "https://www.linkedin.com/in/yanni-speron/",
+        "phone": "+18475059019"
     }
 }

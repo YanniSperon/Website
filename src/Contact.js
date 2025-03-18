@@ -6,7 +6,7 @@ function Contact({ data }) {
         return <div>Loading...</div>;
     }
 
-    const { email, linkedin } = data.contactInfo;
+    const { email, linkedin, phone } = data.contactInfo;
 
     return (
         <div className="container">
@@ -20,6 +20,11 @@ function Contact({ data }) {
                 <a href={linkedin} target="_blank" rel="noopener noreferrer" className="ContactButton">
                     <button className="ResumeButton">
                         <span className="material-icons">groups</span> {linkedin}
+                    </button>
+                </a>
+                <a href={`tel:${phone}`} target="_blank" rel="noopener noreferrer" className="ContactButton">
+                    <button className="ResumeButton">
+                        <span className="material-icons">call</span> {phone}
                     </button>
                 </a>
             </div>

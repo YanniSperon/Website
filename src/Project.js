@@ -4,87 +4,201 @@ import './Home.css';
 
 function Project({ projects }) {
     const { projectName } = useParams();
-    const project = projects.find(p => p.name === projectName);
+    const project = projects[projectName];
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [selectedVersion, setSelectedVersion] = useState(null);
 
     if (!project) {
-        return <div>Project not found</div>;
+        return (
+            <div className="container project-details">
+                <h1 className='contactInfoLabel'>Project not found</h1>
+            </div>
+        );
     }
 
+    // Get all version keys and set the first one as default if not already set
+    const versionKeys = Object.keys(project).filter(key => key.startsWith('Version '));
+    
+    if (!selectedVersion && versionKeys.length > 0) {
+        setSelectedVersion(versionKeys[0]);
+    }
+
+    const currentVersion = selectedVersion ? project[selectedVersion] : null;
+
     const handlePrevImage = () => {
-        setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? project.pictureURLs.length - 1 : prevIndex - 1));
+        if (!currentVersion || !currentVersion.pictureURLs) return;
+        setCurrentImageIndex((prevIndex) => 
+            (prevIndex === 0 ? currentVersion.pictureURLs.length - 1 : prevIndex - 1)
+        );
     };
 
     const handleNextImage = () => {
-        setCurrentImageIndex((prevIndex) => (prevIndex === project.pictureURLs.length - 1 ? 0 : prevIndex + 1));
+        if (!currentVersion || !currentVersion.pictureURLs) return;
+        setCurrentImageIndex((prevIndex) => 
+            (prevIndex === currentVersion.pictureURLs.length - 1 ? 0 : prevIndex + 1)
+        );
     };
+
+    const handleVersionChange = (version) => {
+        setSelectedVersion(version);
+        setCurrentImageIndex(0); // Reset image index when changing versions
+    };
+
+    if (!currentVersion) {
+        return (
+            <div className="container project-details">
+                <h1 className='contactInfoLabel'>{project.name}</h1>
+                <p className='contactInfoLabel'>No version information available</p>
+            </div>
+        );
+    }
 
     return (
         <div className="container project-details">
-            <h1 className='contactInfoLabel'>{project.name}</h1>
-            {project.githubURL && project.githubURL.length > 0 && (
-                <a href={project.githubURL} target="_blank" rel="noopener noreferrer" className="github-link">View on GitHub</a>
+            <h1 className='contactInfoLabel'>{projectName}</h1>
+            
+            {/* Version selector */}
+            {versionKeys.length > 1 && (
+                <div className="version-selector">
+                    <h2 className='contactInfoLabel'>Versions</h2>
+                    <div className="button-container">
+                        {versionKeys.map((version) => (
+                            <button 
+                                key={version}
+                                className={`ResumeButton ${selectedVersion === version ? 'active' : ''}`}
+                                onClick={() => handleVersionChange(version)}
+                            >
+                                {version}
+                            </button>
+                        ))}
+                    </div>
+                </div>
             )}
+            
+            {/* Version changes */}
+            {currentVersion.changes && (
+                <div>
+                    <h2 className='contactInfoLabel'>Changes in this version</h2>
+                    <p className='projectDescription'>{currentVersion.changes}</p>
+                </div>
+            )}
+
+            {/* GitHub link */}
+            {currentVersion.githubURL && (
+                <a 
+                    href={currentVersion.githubURL} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="github-link"
+                >
+                    View on GitHub
+                </a>
+            )}
+            
+            {/* Project timeline */}
             <h2 className='contactInfoLabel'>Project Timeline</h2>
-            <p className='contactInfoLabel'>Start Date: {project.projectStart}</p>
-            <p className='contactInfoLabel'>End Date: {project.projectEnd}</p>
+            <p className='contactInfoLabel'>Start Date: {currentVersion.projectStart}</p>
+            <p className='contactInfoLabel'>End Date: {currentVersion.projectEnd}</p>
+            
+            {/* Description */}
             <h2 className='contactInfoLabel'>Description</h2>
-            <h4 className='projectDescription'>{project.description}</h4>
-            {project.pictureURLs && project.pictureURLs.length > 0 && (
+            <h4 className='projectDescription'>{currentVersion.description}</h4>
+            
+            {/* Images/Photos */}
+            {currentVersion.pictureURLs && currentVersion.pictureURLs.length > 0 && (
                 <div>
                     <h2 className='contactInfoLabel'>Photos</h2>
                     <div className="slideshow-container">
                         <button className="prev" onClick={handlePrevImage}>&#10094;</button>
-                        <img src={project.pictureURLs[currentImageIndex]} alt={`${project.name} ${currentImageIndex + 1}`} className="slideshow-image" />
+                        <img 
+                            src={currentVersion.pictureURLs[currentImageIndex]} 
+                            alt={`${projectName} ${currentImageIndex + 1}`} 
+                            className="slideshow-image" 
+                        />
                         <button className="next" onClick={handleNextImage}>&#10095;</button>
-                        <p className="image-description">{project.pictureDescriptions[currentImageIndex]}</p>
+                        {currentVersion.pictureDescriptions && currentVersion.pictureDescriptions[currentImageIndex] && (
+                            <p className="image-description">
+                                {currentVersion.pictureDescriptions[currentImageIndex]}
+                            </p>
+                        )}
                     </div>
                 </div>
             )}
-            <div className="project-details">
-                {project.components && project.components.length > 0 && (
+            
+            {/* Components */}
+            {currentVersion.components && currentVersion.components.length > 0 && (
+                <div>
                     <h2 className='contactInfoLabel'>Components</h2>
-                )}
-                <ul>
-                    {project.components.map((component, index) => (
-                        <li key={index}>{component}</li>
-                    ))}
-                </ul>
-                {project.primaryLanguages && project.primaryLanguages.length > 0 && (
+                    <ul>
+                        {currentVersion.components.map((component, index) => (
+                            <li key={index}>{component}</li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+            
+            {/* Primary Languages */}
+            {currentVersion.primaryLanguages && currentVersion.primaryLanguages.length > 0 && (
+                <div>
                     <h2 className='contactInfoLabel'>Primary Languages</h2>
-                )}
-                <ul>
-                    {project.primaryLanguages.map((language, index) => (
-                        <li key={index}>{language}</li>
-                    ))}
-                </ul>
-                {project.frameworks && project.frameworks.length > 0 && (
+                    <ul>
+                        {currentVersion.primaryLanguages.map((language, index) => (
+                            <li key={index}>{language}</li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+            
+            {/* Frameworks */}
+            {currentVersion.frameworks && currentVersion.frameworks.length > 0 && (
+                <div>
                     <h2 className='contactInfoLabel'>Frameworks</h2>
-                )}
-                <ul>
-                    {project.frameworks.map((framework, index) => (
-                        <li key={index}>{framework}</li>
-                    ))}
-                </ul>
-                {project.tools && project.tools.length > 0 && (
+                    <ul>
+                        {currentVersion.frameworks.map((framework, index) => (
+                            <li key={index}>
+                                {framework}
+                                {currentVersion.frameworkHints && currentVersion.frameworkHints[index] && (
+                                    <span className="hint"> - {currentVersion.frameworkHints[index]}</span>
+                                )}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+            
+            {/* Tools */}
+            {currentVersion.tools && currentVersion.tools.length > 0 && (
+                <div>
                     <h2 className='contactInfoLabel'>Tools</h2>
-                )}
-                <ul>
-                    {project.tools.map((tool, index) => (
-                        <li key={index}>{tool}</li>
-                    ))}
-                </ul>
-                {project.relatedProjects && project.relatedProjects.length > 0 && (
+                    <ul>
+                        {currentVersion.tools.map((tool, index) => (
+                            <li key={index}>
+                                {tool}
+                                {currentVersion.toolHints && currentVersion.toolHints[index] && (
+                                    <span className="hint"> - {currentVersion.toolHints[index]}</span>
+                                )}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+            
+            {/* Related Projects */}
+            {project.relatedProjects && project.relatedProjects.length > 0 && (
+                <div>
                     <h2 className='contactInfoLabel'>Related Projects</h2>
-                )}
-                <ul>
-                    {project.relatedProjects.map((relatedProject, index) => (
-                        <li key={index}>
-                            <Link to={`/project/${relatedProject}`}>{relatedProject}</Link>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+                    <ul>
+                        {project.relatedProjects.map((relatedProject, index) => (
+                            <Link to={`/project/${relatedProject}`} className="github-link relatedProjectsLink">
+                                {relatedProject}
+                                {project.relatedProjectHints && project.relatedProjectHints[index] && (
+                                    <span className="hintInner"> - {project.relatedProjectHints[index]}</span>
+                                )}
+                            </Link>
+                        ))}
+                    </ul>
+                </div>
+            )}
         </div>
     );
 }

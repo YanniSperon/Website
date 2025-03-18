@@ -183,6 +183,21 @@ a:hover {
     background-color: #555;
 }
 
+.relatedProjectsLink {
+    display: block;
+    margin: 1em;
+    padding: 0.75em 1.5em;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.relatedProjectsLink:hover {
+    background-color: #555;
+}
+
 @media (max-width: 600px) {
     .container {
         padding: 1em;
@@ -245,4 +260,43 @@ a:hover {
 
 .dark-mode .github-link:hover {
     background-color: #3700b3;
+    color: #ffffff;
+}
+
+.version-selector {
+    margin: 2em 0;
+}
+
+.active {
+    background-color: #1a5276 !important;
+}
+
+.dark-mode .active {
+    background-color: #3700b3 !important;
+}
+
+.hint {
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+}
+
+.dark-mode .hint {
+    color: #aaa;
+}
+
+/* Add this new rule for dark mode button hover */
+.dark-mode .ResumeButton:hover {
+    background-color: #3700b3;
+    color: white;
+}
+
+/* Also update the active button text color in dark mode */
+.dark-mode .ResumeButton.active {
+    color: white;
+}
+
+.hintInner {
+    font-size: 0.9em;
+    font-style: italic;
 }

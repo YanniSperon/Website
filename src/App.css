@@ -43,6 +43,7 @@ em {
 }
 
 .dark-mode-toggle {
+  z-index: 10;
   position: fixed;
   bottom: 1em;
   left: 1em;
