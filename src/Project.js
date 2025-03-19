@@ -2,6 +2,48 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './Home.css';
 
+function PlaceImageDisplay({ version, imageIndex, name }) {
+    const url = version.pictureURLs[imageIndex];
+    if (url.includes(".mp4")) {
+        return (
+            <video key={url} controls className="slideshow-video">
+                <source src={url} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        );
+    } else {
+        return (
+            <img 
+                src={url} 
+                alt={`${name} ${imageIndex + 1}`} 
+                className="slideshow-image" 
+            />
+        );
+    }
+}
+
+function VersionToImageCategoryString(version) {
+    var videos = false;
+    var photos = false;
+    version.pictureURLs.forEach((element) => {
+        if (element.includes(".mp4")) {
+            videos = true;
+        } else if (element.includes(".png") || element.includes(".jpg") || element.includes(".jpeg")) {
+            photos = true;
+        }
+    });
+    
+    if (videos === true && photos === false) {
+        return "Videos";
+    } else if (videos === true) {
+        // Photos must be true
+        return "Photos & Videos";
+    } else {
+        // Must just be photos
+        return "Photos";
+    }
+}
+
 function Project({ projects }) {
     const { projectName } = useParams();
     const project = projects[projectName];
@@ -107,14 +149,10 @@ function Project({ projects }) {
             {/* Images/Photos */}
             {currentVersion.pictureURLs && currentVersion.pictureURLs.length > 0 && (
                 <div>
-                    <h2 className='contactInfoLabel'>Photos</h2>
+                    <h2 className='contactInfoLabel'>{VersionToImageCategoryString(currentVersion)}</h2>
                     <div className="slideshow-container">
                         <button className="prev" onClick={handlePrevImage}>&#10094;</button>
-                        <img 
-                            src={currentVersion.pictureURLs[currentImageIndex]} 
-                            alt={`${projectName} ${currentImageIndex + 1}`} 
-                            className="slideshow-image" 
-                        />
+                        <PlaceImageDisplay version={currentVersion} imageIndex={currentImageIndex} name={projectName}/>
                         <button className="next" onClick={handleNextImage}>&#10095;</button>
                         {currentVersion.pictureDescriptions && currentVersion.pictureDescriptions[currentImageIndex] && (
                             <p className="image-description">
@@ -189,7 +227,7 @@ function Project({ projects }) {
                     <h2 className='contactInfoLabel'>Related Projects</h2>
                     <ul>
                         {project.relatedProjects.map((relatedProject, index) => (
-                            <Link to={`/project/${relatedProject}`} className="github-link relatedProjectsLink">
+                            <Link key={relatedProject} to={`/project/${relatedProject}`} className="github-link relatedProjectsLink">
                                 {relatedProject}
                                 {project.relatedProjectHints && project.relatedProjectHints[index] && (
                                     <span className="hintInner"> - {project.relatedProjectHints[index]}</span>

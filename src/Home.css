@@ -126,7 +126,7 @@ a:hover {
     text-align: center;
 }
 
-.slideshow-image {
+.slideshow-image, .slideshow-video {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -152,6 +152,7 @@ a:hover {
     border-radius: 0 3px 3px 0;
     user-select: none;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
 }
 
 .next {

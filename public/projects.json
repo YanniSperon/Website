@@ -1,4 +1,102 @@
 {
+    "Atlas Game Engine": {
+        "thumbnailURL": "https://raw.githubusercontent.com/YanniSperon/Legacy-Atlas-Engine/refs/heads/master/OpenGL/res/images/textures/newcow.png",
+        "relatedProjects": [
+            "Fractyne"
+        ],
+        "relatedProjectHints": [
+            "A standalone shader tool that is utilizing the knowledge I gained from this project."
+        ],
+        "Version 1": {
+            "githubURL": "https://github.com/YanniSperon/Legacy-Atlas-Engine",
+            "pictureURLs": [
+                "https://github.com/YanniSperon/Legacy-Atlas-Engine/raw/1fdc8991a623e2e3b25623dc21a9d8ed5e630b7e/Demonstrations/Animated.mp4",
+                "https://github.com/YanniSperon/Legacy-Atlas-Engine/raw/refs/heads/master/Demonstrations/Physics.mp4"
+            ],
+            "pictureDescriptions": [
+                "A demonstration of the complex model and texture loading as well as the animations.",
+                "A demonstration of the scene editor as well as the physics simulation."
+            ],
+            "description": "This project was a self-directed learning experience in C++ and OpenGL, developed between October and December 2019. The primary goal was to build a functional 3D rendering engine while gaining hands-on experience with graphics programming. The project served as a foundational step in understanding graphics programming and game engine development, completed within the self-imposed deadline of a high school semester.",
+            "components": [
+                "Blinn-Phong lighting model implemented for rudimentary realistic shading.",
+                "Bullet physics integration for dynamic object interactions and 3D environment simulation.",
+                "A custom scene editor designed for quick and easy methods to create, manipulate, and save 3D scenes.",
+                "Multithreaded 3D model loader for efficient scene loading and rendering.",
+                "Post-processing shader effects for bloom and other filtering effects.",
+                "Basic animation capabilities."
+            ],
+            "projectStart": "2019-10-10",
+            "projectEnd": "2019-12-06",
+            "primaryLanguages": [
+                "C++",
+                "GLSL"
+            ],
+            "frameworks": [
+                "OpenGL",
+                "FreeType",
+                "GLFW",
+                "GLEW"
+            ],
+            "frameworkHints": [
+                "The core rendering/shading functionality.",
+                "Used to load OpenGL functions.",
+                "The core user interface and audio processing functionality.",
+                "Basic optimized mathematics functionality."
+            ],
+            "tools": [
+                "Visual Studio 2022",
+                "CMake"
+            ],
+            "toolHints": [
+                "The primary IDE used for application development in C++, including OpenGL and JUCE projects.",
+                "The build system used to manage dependencies and generate project files for cross-platform development."
+            ]
+        }
+    },
+    "Fractyne": {
+        "thumbnailURL": "https://github.com/user-attachments/assets/e8ad19ac-e1e2-4f67-84ef-171df52a88c1",
+        "relatedProjects": [
+            "Atlas Game Engine"
+        ],
+        "relatedProjectHints": [
+            "A game engine that was written from scratch and along the way I learned the shader functionality employed in this project."
+        ],
+        "Version 1": {
+            "changes": "",
+            "githubURL": "",
+            "pictureURLs": [],
+            "pictureDescriptions": [],
+            "description": "A standalone shader tool application currently a work in progress.",
+            "components": [],
+            "projectStart": "2025-02-24",
+            "projectEnd": "Present",
+            "primaryLanguages": [
+                "C++",
+                "GLSL"
+            ],
+            "frameworks": [
+                "OpenGL",
+                "GLAD",
+                "JUCE",
+                "GLM"
+            ],
+            "frameworkHints": [
+                "The core rendering/shading functionality.",
+                "Used to load OpenGL functions.",
+                "The core user interface and audio processing functionality.",
+                "Basic optimized mathematics functionality."
+            ],
+            "tools": [
+                "Visual Studio 2022",
+                "CMake"
+            ],
+            "toolHints": [
+                "The primary IDE used for application development in C++, including OpenGL and JUCE projects.",
+                "The build system used to manage dependencies and generate project files for cross-platform development."
+            ]
+        }
+    },
     "Networked Battleship": {
         "thumbnailURL": "https://github.com/YanniSperon/Battleship/assets/47045424/2bf7a7ee-1046-4bc4-b086-18817a9aad52",
         "relatedProjects": [
@@ -374,97 +472,6 @@
             ]
         }
     },
-    "Atlas Game Engine": {
-        "thumbnailURL": "",
-        "relatedProjects": [
-            "Fractyne"
-        ],
-        "relatedProjectHints": [
-            "A standalone shader tool that is utilizing the knowledge I gained from this project."
-        ],
-        "Version 1": {
-            "githubURL": "https://github.com/YanniSperon/Legacy-Atlas-Engine",
-            "pictureURLs": [],
-            "pictureDescriptions": [],
-            "description": "This project was a self-directed learning experience in C++ and OpenGL, developed between October and December 2019. The primary goal was to build a functional 3D rendering engine while gaining hands-on experience with graphics programming. The project served as a foundational step in understanding graphics programming and game engine development, completed within the self-imposed deadline of a high school semester.",
-            "components": [
-                "Blinn-Phong lighting model implemented for rudimentary realistic shading.",
-                "Bullet physics integration for dynamic object interactions and 3D environment simulation.",
-                "A custom scene editor designed for quick and easy methods to create, manipulate, and save 3D scenes.",
-                "Multithreaded 3D model loader for efficient scene loading and rendering.",
-                "Post-processing shader effects for bloom and other filtering effects."
-            ],
-            "projectStart": "2019-10-10",
-            "projectEnd": "2019-12-06",
-            "primaryLanguages": [
-                "C++",
-                "GLSL"
-            ],
-            "frameworks": [
-                "OpenGL",
-                "FreeType",
-                "GLFW",
-                "GLEW"
-            ],
-            "frameworkHints": [
-                "The core rendering/shading functionality.",
-                "Used to load OpenGL functions.",
-                "The core user interface and audio processing functionality.",
-                "Basic optimized mathematics functionality."
-            ],
-            "tools": [
-                "Visual Studio 2022",
-                "CMake"
-            ],
-            "toolHints": [
-                "The primary IDE used for application development in C++, including OpenGL and JUCE projects.",
-                "The build system used to manage dependencies and generate project files for cross-platform development."
-            ]
-        }
-    },
-    "Fractyne": {
-        "thumbnailURL": "https://github.com/user-attachments/assets/e8ad19ac-e1e2-4f67-84ef-171df52a88c1",
-        "relatedProjects": [
-            "Atlas Game Engine"
-        ],
-        "relatedProjectHints": [
-            "A game engine that was written from scratch and along the way I learned the shader functionality employed in this project."
-        ],
-        "Version 1": {
-            "changes": "",
-            "githubURL": "",
-            "pictureURLs": [],
-            "pictureDescriptions": [],
-            "description": "A standalone shader tool application currently a work in progress.",
-            "components": [],
-            "projectStart": "2025-02-24",
-            "projectEnd": "Present",
-            "primaryLanguages": [
-                "C++",
-                "GLSL"
-            ],
-            "frameworks": [
-                "OpenGL",
-                "GLAD",
-                "JUCE",
-                "GLM"
-            ],
-            "frameworkHints": [
-                "The core rendering/shading functionality.",
-                "Used to load OpenGL functions.",
-                "The core user interface and audio processing functionality.",
-                "Basic optimized mathematics functionality."
-            ],
-            "tools": [
-                "Visual Studio 2022",
-                "CMake"
-            ],
-            "toolHints": [
-                "The primary IDE used for application development in C++, including OpenGL and JUCE projects.",
-                "The build system used to manage dependencies and generate project files for cross-platform development."
-            ]
-        }
-    },
     "Many More Already Completed": {
         "thumbnailURL": "",
         "relatedProjects": [],
@@ -476,7 +483,7 @@
             "pictureDescriptions": [],
             "description": "Soon to be added, lots of projects have already been completed and have had hundreds of hours sunk into them. It is just a matter of writing the descriptions, formatting the JSON, and loading them into the website's database.",
             "components": [],
-            "projectStart": "2020-01-01",
+            "projectStart": "2020-03-15",
             "projectEnd": "Present",
             "primaryLanguages": [
                 "C++",
