@@ -9,8 +9,6 @@ const TRACKING_ID = "G-E6T12DB3WN"; // your Measurement ID
 
 ReactGA.initialize(TRACKING_ID, {debug: false});
 
-ReactGA.send({ hitType: "pageview", page: window.location.pathname + window.location.search, title: "Landing Page" });
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

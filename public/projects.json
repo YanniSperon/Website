@@ -1,5 +1,12 @@
 {
     "Atlas Game Engine": {
+        "collaborators": [
+        ],
+        "collaboratorHints": [
+        ],
+        "collaboratorLinks": [
+        ],
+        "highlighted": true,
         "thumbnailURL": "https://raw.githubusercontent.com/YanniSperon/Legacy-Atlas-Engine/refs/heads/master/OpenGL/res/images/textures/newcow.png",
         "relatedProjects": [
             "Fractyne"
@@ -34,15 +41,19 @@
             ],
             "frameworks": [
                 "OpenGL",
-                "FreeType",
+                "ImGui",
                 "GLFW",
-                "GLEW"
+                "GLEW",
+                "GLM",
+                "FreeType"
             ],
             "frameworkHints": [
                 "The core rendering/shading functionality.",
+                "Basic 2D user interface rendering.",
+                "Basic cross-platform window creation and deletion.",
                 "Used to load OpenGL functions.",
-                "The core user interface and audio processing functionality.",
-                "Basic optimized mathematics functionality."
+                "Basic SIMD accelerated vector/matrix functionality.",
+                "Used to implement custom TrueType font rendering."
             ],
             "tools": [
                 "Visual Studio 2022",
@@ -55,6 +66,13 @@
         }
     },
     "Fractyne": {
+        "collaborators": [
+        ],
+        "collaboratorHints": [
+        ],
+        "collaboratorLinks": [
+        ],
+        "highlighted": true,
         "thumbnailURL": "https://github.com/user-attachments/assets/e8ad19ac-e1e2-4f67-84ef-171df52a88c1",
         "relatedProjects": [
             "Atlas Game Engine"
@@ -98,6 +116,13 @@
         }
     },
     "Networked Battleship": {
+        "collaborators": [
+        ],
+        "collaboratorHints": [
+        ],
+        "collaboratorLinks": [
+        ],
+        "highlighted": true,
         "thumbnailURL": "https://github.com/YanniSperon/Battleship/assets/47045424/2bf7a7ee-1046-4bc4-b086-18817a9aad52",
         "relatedProjects": [
             "Group Messenger"
@@ -288,7 +313,198 @@
             ]
         }
     },
+    "Space Science Game": {
+        "collaborators": [
+            "volemyu"
+        ],
+        "collaboratorHints": [
+            "Developed custom title screen music and helped with audio pre-processing."
+        ],
+        "collaboratorLinks": [
+            "https://linktr.ee/volemyu"
+        ],
+        "highlighted": true,
+        "thumbnailURL": "https://raw.githubusercontent.com/YanniSperon/Space-Science-Project/f1ad2fcda4cfd98bca3387ae93a178b565b928ed/Media/icon.jpg",
+        "relatedProjects": [
+            "Atlas Game Engine"
+        ],
+        "relatedProjectHints": [
+            "Developed around the same time, using similar skills."
+        ],
+        "Version 1": {
+            "githubURL": "https://github.com/YanniSperon/Space-Science-Project",
+            "pictureURLs": [
+                "https://github.com/YanniSperon/Space-Science-Project/blob/f1ad2fcda4cfd98bca3387ae93a178b565b928ed/Media/demo.mp4?raw=true"
+            ],
+            "pictureDescriptions": [
+                "A demonstration of the game. This was played during a verbal in-class presentation."
+            ],
+            "description": "This project was a self-directed learning experience in C++ and OpenGL. Developed in one week, with a very small amount of start code borrowed from the original Atlas Engine. The primary goal was to make an engaging visual to accompany a verbal presentation in a space science course.",
+            "components": [
+                "Hand-written 2D SAT collision detection.",
+                "Custom texture atlas based 2D animation.",
+                "A custom glyph font atlas generator and renderer",
+                "Quick unique games to provide an interesting visual during presentation."
+            ],
+            "projectStart": "2019-11-15",
+            "projectEnd": "2019-11-22",
+            "primaryLanguages": [
+                "C++",
+                "GLSL"
+            ],
+            "frameworks": [
+                "OpenGL",
+                "GLFW",
+                "GLEW",
+                "irrKlang",
+                "GLM"
+            ],
+            "frameworkHints": [
+                "The core rendering/shading functionality.",
+                "Basic cross platform window creation and management",
+                "Used to load OpenGL functions.",
+                "Used to load and play 2D audio.",
+                "Basic SIMD accelerated vector/matrix functionality."
+            ],
+            "tools": [
+                "Visual Studio 2022",
+                "Git"
+            ],
+            "toolHints": [
+                "The primary IDE used for application development in C++.",
+                "The version control software used."
+            ]
+        }
+    },
+    "Professional Website Portfolio": {
+        "collaborators": [
+        ],
+        "collaboratorHints": [
+        ],
+        "collaboratorLinks": [
+        ],
+        "highlighted": false,
+        "thumbnailURL": "https://github.com/user-attachments/assets/bfb49a1c-dd65-4f8d-b7c5-a75af10453d9",
+        "relatedProjects": [],
+        "relatedProjectHints": [],
+        "Version 1": {
+            "changes": "",
+            "githubURL": "https://github.com/YanniSperon/Website",
+            "pictureURLs": [],
+            "pictureDescriptions": [],
+            "description": "A hand-written professional website portfolio made in React",
+            "components": [
+                "React frontend",
+                "Responsive",
+                "Mobile friendly",
+                "Google Analytics 4 integration",
+                "Supports dark mode and light mode"
+            ],
+            "projectStart": "2025-03-05",
+            "projectEnd": "2025-03-10",
+            "primaryLanguages": [
+                "JavaScript",
+                "JSX",
+                "HTML",
+                "CSS"
+            ],
+            "frameworks": [
+                "React",
+                "React Router",
+                "React-GA4",
+                "Apollo Client (Pending)"
+            ],
+            "frameworkHints": [
+                "The core of the web page.",
+                "Simplifying some features like switching pages.",
+                "Allows measurement of metrics",
+                "Planned GraphQL integration with GitHub and LinkedIn."
+            ],
+            "tools": [
+                "Visual Studio Code",
+                "NPM"
+            ],
+            "toolHints": [
+                "The primary IDE used for development.",
+                "The primary build automation tool used for managing dependencies and building the project."
+            ]
+        }
+    },
+    "Smart Bike Helmet": {
+        "collaborators": [
+        ],
+        "collaboratorHints": [
+        ],
+        "collaboratorLinks": [
+        ],
+        "highlighted": false,
+        "thumbnailURL": "https://github.com/user-attachments/assets/a92e75af-dde9-40c6-9b60-426cdb0552a9",
+        "relatedProjects": [],
+        "relatedProjectHints": [],
+        "Version 1": {
+            "changes": "",
+            "githubURL": "https://github.com/YanniSperon/MessagingApp",
+            "pictureURLs": [
+                "https://github.com/user-attachments/assets/a92e75af-dde9-40c6-9b60-426cdb0552a9",
+                "https://github.com/user-attachments/assets/d2246dee-c9dd-432f-9d29-4b6bf3668ff6",
+                "https://github.com/user-attachments/assets/f8c8e5cc-2af8-46a0-9595-9450054b1b91",
+                "https://github.com/user-attachments/assets/121f16d2-9310-47fd-874c-8d7574b2d931",
+                "https://github.com/user-attachments/assets/9343b888-01a7-471d-a462-3c02a345d5db",
+                "https://github.com/user-attachments/assets/232cb0a8-8227-4c8a-a467-6a37bd2df9d8",
+                "https://github.com/user-attachments/assets/87baa803-009a-4911-bde0-78982a22b7e5",
+                "https://github.com/user-attachments/assets/21347ced-aa1c-42ec-b6c9-84b7137c3fdd"
+            ],
+            "pictureDescriptions": [
+                "The prototype helmet prior to bundling of the electronics.",
+                "The back of the prototype helmet prior to bundling of the electronics.",
+                "The prototype optional glove mounted electronic component.",
+                "The wiring of the helmet Arduino/sensors and the glove Arduino/sensors.",
+                "A mock up of the planned user interface showing blinking of a turn signal.",
+                "A mock up of the planned user interface with a crash notification based on gyroscopic sensors.",
+                "A mock up of the screen when \"Yes\" is selected in the previous page.",
+                "A mock up of the settings screen to disable SOS (crash) notifications."
+            ],
+            "description": "This prototype smart helmet system adds turn signals to a bike helmet, controllable via hand gestures (with an optional glove) or helmet motion (via an accelerometer). It is designed to work alongside an iOS app for additional functionality.",
+            "components": [
+                "Arduino-based system controlling turn signals via motion and gesture inputs.",
+                "Glove component with sensors to detect hand gestures for signal activation.",
+                "Helmet accelerometer to detect head movements for automated signal control.",
+                "iOS app built with SceneKit, UIKit, and Swift for expanded functionality.",
+                "All hardware and software were developed and wired by Yanni Speron."
+            ],
+            "projectStart": "2024-11-21",
+            "projectEnd": "2024-12-05",
+            "primaryLanguages": [
+                "C++",
+                "Swift"
+            ],
+            "frameworks": [
+                "Core Bluetooth",
+                "SceneKit",
+                "UIKit"
+            ],
+            "frameworkHints": [
+                "The core functionality of the 2D user interface.",
+                "The core networking features for sending and receiving basic messages over raw Java Sockets."
+            ],
+            "tools": [
+                "Arduino IDE",
+                "XCode"
+            ],
+            "toolHints": [
+                "The primary IDE used for the microcontroller development, used ot manage dependencies and build the project.",
+                "The primary IDE used for the iOS development, used to manage dependencies and build the project."
+            ]
+        }
+    },
     "Group Messenger": {
+        "collaborators": [
+        ],
+        "collaboratorHints": [
+        ],
+        "collaboratorLinks": [
+        ],
+        "highlighted": false,
         "thumbnailURL": "https://github.com/user-attachments/assets/3ac8cd5f-3089-4eb9-86d6-1ab2fef9e3ec",
         "relatedProjects": [
             "Networked Battleship"
@@ -365,114 +581,14 @@
             ]
         }
     },
-    "Professional Website Portfolio": {
-        "thumbnailURL": "https://github.com/user-attachments/assets/bfb49a1c-dd65-4f8d-b7c5-a75af10453d9",
-        "relatedProjects": [],
-        "relatedProjectHints": [],
-        "Version 1": {
-            "changes": "",
-            "githubURL": "https://github.com/YanniSperon/Website",
-            "pictureURLs": [],
-            "pictureDescriptions": [],
-            "description": "A hand-written professional website portfolio made in React",
-            "components": [
-                "React frontend",
-                "Responsive",
-                "Mobile friendly",
-                "Google Analytics 4 integration",
-                "Supports dark mode and light mode"
-            ],
-            "projectStart": "2025-03-05",
-            "projectEnd": "2025-03-10",
-            "primaryLanguages": [
-                "JavaScript",
-                "JSX",
-                "HTML",
-                "CSS"
-            ],
-            "frameworks": [
-                "React",
-                "React Router",
-                "React-GA4",
-                "Apollo Client (Pending)"
-            ],
-            "frameworkHints": [
-                "The core of the web page.",
-                "Simplifying some features like switching pages.",
-                "Allows measurement of metrics",
-                "Planned GraphQL integration with GitHub and LinkedIn."
-            ],
-            "tools": [
-                "Visual Studio Code",
-                "NPM"
-            ],
-            "toolHints": [
-                "The primary IDE used for development.",
-                "The primary build automation tool used for managing dependencies and building the project."
-            ]
-        }
-    },
-    "Smart Bike Helmet": {
-        "thumbnailURL": "https://github.com/user-attachments/assets/a92e75af-dde9-40c6-9b60-426cdb0552a9",
-        "relatedProjects": [],
-        "relatedProjectHints": [],
-        "Version 1": {
-            "changes": "",
-            "githubURL": "https://github.com/YanniSperon/MessagingApp",
-            "pictureURLs": [
-                "https://github.com/user-attachments/assets/a92e75af-dde9-40c6-9b60-426cdb0552a9",
-                "https://github.com/user-attachments/assets/d2246dee-c9dd-432f-9d29-4b6bf3668ff6",
-                "https://github.com/user-attachments/assets/f8c8e5cc-2af8-46a0-9595-9450054b1b91",
-                "https://github.com/user-attachments/assets/121f16d2-9310-47fd-874c-8d7574b2d931",
-                "https://github.com/user-attachments/assets/9343b888-01a7-471d-a462-3c02a345d5db",
-                "https://github.com/user-attachments/assets/232cb0a8-8227-4c8a-a467-6a37bd2df9d8",
-                "https://github.com/user-attachments/assets/87baa803-009a-4911-bde0-78982a22b7e5",
-                "https://github.com/user-attachments/assets/21347ced-aa1c-42ec-b6c9-84b7137c3fdd"
-            ],
-            "pictureDescriptions": [
-                "The prototype helmet prior to bundling of the electronics.",
-                "The back of the prototype helmet prior to bundling of the electronics.",
-                "The prototype optional glove mounted electronic component.",
-                "The wiring of the helmet Arduino/sensors and the glove Arduino/sensors.",
-                "A mock up of the planned user interface showing blinking of a turn signal.",
-                "A mock up of the planned user interface with a crash notification based on gyroscopic sensors.",
-                "A mock up of the screen when \"Yes\" is selected in the previous page.",
-                "A mock up of the settings screen to disable SOS (crash) notifications."
-            ],
-            "description": "This prototype smart helmet system adds turn signals to a bike helmet, controllable via hand gestures (with an optional glove) or helmet motion (via an accelerometer). It is designed to work alongside an iOS app for additional functionality.",
-            "components": [
-                "Arduino-based system controlling turn signals via motion and gesture inputs.",
-                "Glove component with sensors to detect hand gestures for signal activation.",
-                "Helmet accelerometer to detect head movements for automated signal control.",
-                "iOS app built with SceneKit, UIKit, and Swift for expanded functionality.",
-                "All hardware and software were developed and wired by Yanni Speron."
-            ],
-            "projectStart": "2024-11-21",
-            "projectEnd": "2024-12-05",
-            "primaryLanguages": [
-                "C++",
-                "Swift"
-            ],
-            "frameworks": [
-                "Core Bluetooth",
-                "SceneKit",
-                "UIKit"
-            ],
-            "frameworkHints": [
-                "The core functionality of the 2D user interface.",
-                "The core networking features for sending and receiving basic messages over raw Java Sockets."
-            ],
-            "tools": [
-                "Arduino IDE",
-                "XCode"
-            ],
-            "toolHints": [
-                "The primary IDE used for the microcontroller development, used ot manage dependencies and build the project.",
-                "The primary IDE used for the iOS development, used to manage dependencies and build the project."
-            ]
-        }
-    },
     "Many More Already Completed": {
+        "collaborators": [
+        ],
+        "collaboratorHints": [
+        ],
+        "collaboratorLinks": [
+        ],
+        "highlighted": false,
         "thumbnailURL": "",
         "relatedProjects": [],
         "relatedProjectHints": [],

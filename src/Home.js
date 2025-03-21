@@ -1,9 +1,24 @@
 import './Home.css';
 import './App.css';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-function Home({ data, projects }) {
+function Home({ data, projects, handleLinkClick }) {
+    const [showPopover, setShowPopover] = useState(false);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (showPopover) {
+                setShowPopover(false);
+            }
+        };
+
+        document.addEventListener('click', handleClickOutside);
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, [showPopover]);
+
     if (!data) {
         return <div>Loading...</div>;
     }
@@ -18,60 +33,38 @@ function Home({ data, projects }) {
         });
     };
 
+    const handlePopoverButtonClick = (event) => {
+        event.stopPropagation();
+        setShowPopover(true);
+    };
+
     return (
         <div className="container">
-            <h1>Yanni Speron</h1>
-            {data.description.map((desc, index) => (
-                <p key={index}>{parseDescription(desc)}</p>
-            ))}
+            <h1 className="centeredText">Yanni Speron</h1>
 
-            <h2>Seeking</h2>
+            <img className="headshot" src="/YanniSperonHeadshot.jpg" alt="Headshot" />
+            <button className="ResumeButton" onClick={handlePopoverButtonClick}>View Professional Summary</button>
+
+            <h2 className="centeredText">Seeking</h2>
             <ul>
                 {data.seeking.map((seek, index) => (
                     <li key={index}>{seek}</li>
                 ))}
             </ul>
 
-            <h2>Employment</h2>
-            <ul>
-                {data.employment.map((job, index) => (
-                    <li key={index}>
-                        <strong>{job.title}</strong> at <a href={job.link}>{job.company} in {job.location}</a>
-                        <ul><li>{job.startCondition} - {job.endCondition}</li></ul>
-                        <ul><li>{job.hours}</li></ul>
-                        <ul>
-                            {job.description.map((desc, i) => (
-                                <li key={i}>{parseDescription(desc)}</li>
-                            ))}
-                        </ul>
-                    </li>
-                ))}
-            </ul>
-
-            <h2>Education</h2>
-            <ul>
-                {data.education.map((edu, index) => (
-                    <li key={index}>
-                        <strong>{edu.degree}</strong> at <a href={edu.link}>{edu.school} in {edu.location}</a>
-                        <ul><li>{edu.startCondition}, {edu.endCondition}</li></ul>
-                        <ul><li>GPA: {edu.gpa}</li></ul>
-                    </li>
-                ))}
-            </ul>
-
-            <h2>Favorite Projects</h2>
+            <h2 className="centeredText">Favorite Projects</h2>
             <ul>
                 {data.favoriteProjects.map((project, index) => (
-                    <li key={index}>
+                    <li className="centeredText" key={index}>
                         <Link to={`/project/${project}`}>{project}</Link>
                     </li>
                 ))}
             </ul>
 
-            <h2>Ongoing Projects</h2>
+            <h2 className="centeredText">Ongoing Projects</h2>
             <ul>
                 {data.ongoingProjects.map((project, index) => (
-                    <li key={index}>
+                    <li className="centeredText" key={index}>
                         <Link to={`/project/${project.name}`}>
                             {project.name} - {project.status} ({project.privacy})
                         </Link>
@@ -79,9 +72,22 @@ function Home({ data, projects }) {
                 ))}
             </ul>
 
-            <a href={`${process.env.PUBLIC_URL}/YanniSperonResume.pdf`} download="YanniSperonResume" target='_blank' rel="noopener noreferrer">
-                <button className="ResumeButton">Download Resume</button>
-            </a>
+            <h2 className="centeredText">Resources</h2>
+            <button className="ResumeButton" onClick={() => handleLinkClick("/YanniSperonResume.pdf")}>Download Resume</button>
+            <button className="ResumeButton" onClick={() => handleLinkClick("/YanniSperonCoverLetter.pdf")}>Download Cover Letter</button>
+
+            {showPopover && (
+                <div className="popover-overlay">
+                    <div className="popover">
+                        <h2 className="centeredText">Professional Summary</h2>
+                        <div>
+                            {data.description.map((desc, index) => (
+                                <p className="missionStatementParagraph" key={index}>{parseDescription(desc)}</p>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Work.css';
+import './Home.css';
 import { Link } from 'react-router-dom';
 
 function Work({ projects }) {
@@ -14,7 +15,6 @@ function Work({ projects }) {
             <h1 className="projectsTitle">Projects</h1>
             <div className="grid-container">
                 {Object.entries(projects).map(([k, v]) => {
-                    console.log(k);
                     const backgroundImage = v.thumbnailURL ? `url(${v.thumbnailURL})` : 'none';
                     
                     return (

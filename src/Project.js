@@ -6,17 +6,17 @@ function PlaceImageDisplay({ version, imageIndex, name }) {
     const url = version.pictureURLs[imageIndex];
     if (url.includes(".mp4")) {
         return (
-            <video key={url} controls className="slideshow-video">
+            <video key={url} controls className="slideshow-media">
                 <source src={url} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         );
     } else {
         return (
-            <img 
-                src={url} 
-                alt={`${name} ${imageIndex + 1}`} 
-                className="slideshow-image" 
+            <img
+                src={url}
+                alt={`${name} ${imageIndex + 1}`}
+                className="slideshow-media"
             />
         );
     }
@@ -32,7 +32,7 @@ function VersionToImageCategoryString(version) {
             photos = true;
         }
     });
-    
+
     if (videos === true && photos === false) {
         return "Videos";
     } else if (videos === true) {
@@ -44,11 +44,12 @@ function VersionToImageCategoryString(version) {
     }
 }
 
-function Project({ projects }) {
+function Project({ projects, handleLinkClick }) {
     const { projectName } = useParams();
     const project = projects[projectName];
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [selectedVersion, setSelectedVersion] = useState(null);
+    const [showAllComponents, setShowAllComponents] = useState(false);
 
     if (!project) {
         return (
@@ -60,7 +61,7 @@ function Project({ projects }) {
 
     // Get all version keys and set the first one as default if not already set
     const versionKeys = Object.keys(project).filter(key => key.startsWith('Version '));
-    
+
     if (!selectedVersion && versionKeys.length > 0) {
         setSelectedVersion(versionKeys[0]);
     }
@@ -69,14 +70,14 @@ function Project({ projects }) {
 
     const handlePrevImage = () => {
         if (!currentVersion || !currentVersion.pictureURLs) return;
-        setCurrentImageIndex((prevIndex) => 
+        setCurrentImageIndex((prevIndex) =>
             (prevIndex === 0 ? currentVersion.pictureURLs.length - 1 : prevIndex - 1)
         );
     };
 
     const handleNextImage = () => {
         if (!currentVersion || !currentVersion.pictureURLs) return;
-        setCurrentImageIndex((prevIndex) => 
+        setCurrentImageIndex((prevIndex) =>
             (prevIndex === currentVersion.pictureURLs.length - 1 ? 0 : prevIndex + 1)
         );
     };
@@ -86,11 +87,15 @@ function Project({ projects }) {
         setCurrentImageIndex(0); // Reset image index when changing versions
     };
 
+    const toggleShowAllComponents = () => {
+        setShowAllComponents(!showAllComponents);
+    };
+
     if (!currentVersion) {
         return (
             <div className="container project-details">
                 <h1 className='contactInfoLabel'>{project.name}</h1>
-                <p className='contactInfoLabel'>No version information available</p>
+                <h4 className='contactInfoLabel'>No version information available</h4>
             </div>
         );
     }
@@ -98,14 +103,13 @@ function Project({ projects }) {
     return (
         <div className="container project-details">
             <h1 className='contactInfoLabel'>{projectName}</h1>
-            
+
             {/* Version selector */}
             {versionKeys.length > 1 && (
                 <div className="version-selector">
-                    <h2 className='contactInfoLabel'>Versions</h2>
                     <div className="button-container">
                         {versionKeys.map((version) => (
-                            <button 
+                            <button
                                 key={version}
                                 className={`ResumeButton ${selectedVersion === version ? 'active' : ''}`}
                                 onClick={() => handleVersionChange(version)}
@@ -116,65 +120,52 @@ function Project({ projects }) {
                     </div>
                 </div>
             )}
-            
+
             {/* Version changes */}
             {currentVersion.changes && (
                 <div>
                     <h2 className='contactInfoLabel'>Changes in this version</h2>
-                    <p className='projectDescription'>{currentVersion.changes}</p>
+                    <h4 className='projectDescription'>{currentVersion.changes}</h4>
                 </div>
             )}
 
             {/* GitHub link */}
             {currentVersion.githubURL && (
-                <a 
-                    href={currentVersion.githubURL} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                <button
+                    onClick={() => handleLinkClick(currentVersion.githubURL)}
                     className="github-link"
                 >
                     View on GitHub
-                </a>
+                </button>
             )}
-            
+
             {/* Project timeline */}
             <h2 className='contactInfoLabel'>Project Timeline</h2>
-            <p className='contactInfoLabel'>Start Date: {currentVersion.projectStart}</p>
-            <p className='contactInfoLabel'>End Date: {currentVersion.projectEnd}</p>
-            
+            <h4 className='contactInfoLabel'>{currentVersion.projectStart} to {currentVersion.projectEnd}</h4>
+
             {/* Description */}
             <h2 className='contactInfoLabel'>Description</h2>
-            <h4 className='projectDescription'>{currentVersion.description}</h4>
-            
+            <p className='projectDescription'>{currentVersion.description}</p>
+
             {/* Images/Photos */}
             {currentVersion.pictureURLs && currentVersion.pictureURLs.length > 0 && (
                 <div>
                     <h2 className='contactInfoLabel'>{VersionToImageCategoryString(currentVersion)}</h2>
-                    <div className="slideshow-container">
-                        <button className="prev" onClick={handlePrevImage}>&#10094;</button>
-                        <PlaceImageDisplay version={currentVersion} imageIndex={currentImageIndex} name={projectName}/>
-                        <button className="next" onClick={handleNextImage}>&#10095;</button>
-                        {currentVersion.pictureDescriptions && currentVersion.pictureDescriptions[currentImageIndex] && (
-                            <p className="image-description">
-                                {currentVersion.pictureDescriptions[currentImageIndex]}
-                            </p>
-                        )}
+                    <div className="slideshow-container-background">
+                        <div className="slideshow-container">
+                            <button className="prev" onClick={handlePrevImage}>&#10094;</button>
+                            <PlaceImageDisplay version={currentVersion} imageIndex={currentImageIndex} name={projectName} />
+                            <button className="next" onClick={handleNextImage}>&#10095;</button>
+                        </div>
                     </div>
+                    {currentVersion.pictureDescriptions && currentVersion.pictureDescriptions[currentImageIndex] && (
+                        <h4 className="image-description">
+                            {currentVersion.pictureDescriptions[currentImageIndex]}
+                        </h4>
+                    )}
                 </div>
             )}
-            
-            {/* Components */}
-            {currentVersion.components && currentVersion.components.length > 0 && (
-                <div>
-                    <h2 className='contactInfoLabel'>Components</h2>
-                    <ul>
-                        {currentVersion.components.map((component, index) => (
-                            <li key={index}>{component}</li>
-                        ))}
-                    </ul>
-                </div>
-            )}
-            
+
             {/* Primary Languages */}
             {currentVersion.primaryLanguages && currentVersion.primaryLanguages.length > 0 && (
                 <div>
@@ -186,7 +177,7 @@ function Project({ projects }) {
                     </ul>
                 </div>
             )}
-            
+
             {/* Frameworks */}
             {currentVersion.frameworks && currentVersion.frameworks.length > 0 && (
                 <div>
@@ -203,7 +194,7 @@ function Project({ projects }) {
                     </ul>
                 </div>
             )}
-            
+
             {/* Tools */}
             {currentVersion.tools && currentVersion.tools.length > 0 && (
                 <div>
@@ -220,14 +211,56 @@ function Project({ projects }) {
                     </ul>
                 </div>
             )}
-            
+
+            {/* Components */}
+            {currentVersion.components && currentVersion.components.length > 0 && (
+                <div>
+                    <h2 className='contactInfoLabel'>Components</h2>
+                    <ul>
+                        {currentVersion.components.slice(0, showAllComponents ? currentVersion.components.length : 5).map((component, index) => (
+                            <li key={index}>{component}</li>
+                        ))}
+                    </ul>
+                    {currentVersion.components.length > 5 && (
+                        <div className="centeredButton">
+                            <button className="github-link relatedProjectsLink centeredText centeredButtonMargin" onClick={toggleShowAllComponents}>
+                                {showAllComponents ? 'Less' : 'More'}
+                            </button>
+                        </div>
+                    )}
+                </div>
+            )}
+
+            {/* Collaborators */}
+            {project.collaborators && project.collaborators.length > 0 && (
+                <div>
+                    <h2 className='contactInfoLabel'>Collaborators</h2>
+                    <ul>
+                        {project.collaborators.map((collaborator, index) => (
+                            <a
+                                key={collaborator}
+                                href={project.collaboratorLinks[index]}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="github-link relatedProjectsLink centeredText"
+                            >
+                                {collaborator}
+                                {project.collaboratorHints && project.collaboratorHints[index] && (
+                                    <span className="hintInner"> - {project.collaboratorHints[index]}</span>
+                                )}
+                            </a>
+                        ))}
+                    </ul>
+                </div>
+            )}
+
             {/* Related Projects */}
             {project.relatedProjects && project.relatedProjects.length > 0 && (
                 <div>
                     <h2 className='contactInfoLabel'>Related Projects</h2>
                     <ul>
                         {project.relatedProjects.map((relatedProject, index) => (
-                            <Link key={relatedProject} to={`/project/${relatedProject}`} className="github-link relatedProjectsLink">
+                            <Link key={relatedProject} to={`/project/${relatedProject}`} className="github-link relatedProjectsLink centeredText">
                                 {relatedProject}
                                 {project.relatedProjectHints && project.relatedProjectHints[index] && (
                                     <span className="hintInner"> - {project.relatedProjectHints[index]}</span>
