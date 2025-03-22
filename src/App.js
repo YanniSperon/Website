@@ -37,30 +37,21 @@ function PageTracking() {
     return null;
 }
 
-function ModeToggle({ darkMode, toggleDarkMode, windowSize }) {
-    if (windowSize.width > 600) {
-        return (
-            <button className="dark-mode-toggle" onClick={toggleDarkMode}>
-                <h4 className="colorText">{darkMode ? 'Enable Light Mode' : 'Enable Dark Mode'}&emsp;&emsp;</h4>
-                <span className="material-icons icon-box">
-                    {darkMode ? 'light_mode' : 'dark_mode'}
-                </span>
-            </button>
-        );
-    } else {
-        return (
-            <button className="dark-mode-toggle-small" onClick={toggleDarkMode}>
-                <span className="material-icons icon-box">
-                    {darkMode ? 'light_mode' : 'dark_mode'}
-                </span>
-            </button>
-        );
-    }
+function ModeToggle({ darkMode, toggleDarkMode }) {
+    return (
+        <button className="dark-mode-toggle-small" onClick={toggleDarkMode}>
+            <span className="material-icons icon-box">
+                {darkMode ? 'light_mode' : 'dark_mode'}
+            </span>
+        </button>
+    );
 }
 
 function App() {
     const [data, setData] = useState(null);
     const [projects, setProjects] = useState({});
+    const [icons, setIcons] = useState({});
+
     const [darkMode, setDarkMode] = useState(() => {
         const savedDarkMode = localStorage.getItem('darkMode');
         var res = false;
@@ -73,7 +64,6 @@ function App() {
         }
         return res;
     });
-    const [windowSize, setWindowSize] = useState({ width: window.innerWidth, height: window.innerHeight });
     const linkRef = useRef(null);
 
     useEffect(() => {
@@ -89,6 +79,12 @@ function App() {
     }, []);
 
     useEffect(() => {
+        fetch("/icons.json")
+            .then(response => response.json())
+            .then(data => setIcons(data));
+    }, []);
+
+    useEffect(() => {
         if (darkMode) {
             document.body.classList.add('dark-mode');
         } else {
@@ -100,17 +96,6 @@ function App() {
         );
         localStorage.setItem('darkMode', JSON.stringify(darkMode));
     }, [darkMode]);
-
-    useEffect(() => {
-        function handleResize() {
-            setWindowSize({ width: window.innerWidth, height: window.innerHeight });
-        }
-
-        window.addEventListener("resize", handleResize);
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
 
     const toggleDarkMode = () => {
         setDarkMode(!darkMode);
@@ -141,13 +126,13 @@ function App() {
                     <Route index element={<Home data={data} projects={projects} handleLinkClick={handleLinkClick} />} />
                     <Route path="/work" element={<Work projects={projects} handleLinkClick={handleLinkClick} />} />
                     <Route path="/contact" element={<Contact data={data} handleLinkClick={handleLinkClick} />} />
-                    <Route path="/project/:projectName" element={<Project projects={projects} handleLinkClick={handleLinkClick} />} />
+                    <Route path="/project/:projectName" element={<Project projects={projects} handleLinkClick={handleLinkClick} icons={icons}/>} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
                 <Footer />
                 <a ref={linkRef} href="/" aria-hidden="true" hidden={true}>Hidden Link</a>
             </HashRouter>
-            <ModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} windowSize={windowSize} />
+            <ModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         </div>
     );
 }

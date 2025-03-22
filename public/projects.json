@@ -57,11 +57,13 @@
             ],
             "tools": [
                 "Visual Studio 2022",
-                "CMake"
+                "Premake",
+                "Git"
             ],
             "toolHints": [
                 "The primary IDE used for application development in C++, including OpenGL and JUCE projects.",
-                "The build system used to manage dependencies and generate project files for cross-platform development."
+                "The build system used to manage dependencies and generate project files for cross-platform development.",
+                "The version control software used."
             ]
         }
     },
@@ -107,11 +109,13 @@
             ],
             "tools": [
                 "Visual Studio 2022",
-                "CMake"
+                "CMake",
+                "Git"
             ],
             "toolHints": [
                 "The primary IDE used for application development in C++, including OpenGL and JUCE projects.",
-                "The build system used to manage dependencies and generate project files for cross-platform development."
+                "The build system used to manage dependencies and generate project files for cross-platform development.",
+                "The version control software used."
             ]
         }
     },
@@ -204,13 +208,15 @@
                 "IntelliJ IDEA",
                 "Blender",
                 "Adobe Photoshop",
-                "Maven"
+                "Maven",
+                "Git"
             ],
             "toolHints": [
                 "The primary IDE used for development.",
                 "The primary 3D modeling software used for creating 3D models.",
                 "The primary image editing software used for creating textures and GUI elements.",
-                "The primary build automation tool used for managing dependencies and building the project."
+                "The primary build automation tool used for managing dependencies and building the project.",
+                "The version control software used."
             ],
             "relatedProjects": [
                 "Group Messenger",
@@ -302,20 +308,22 @@
                 "Blender",
                 "Adobe Photoshop",
                 "Maven",
-                "Processing IDE"
+                "Processing IDE",
+                "Git"
             ],
             "toolHints": [
                 "The primary IDE used for development.",
                 "The primary 3D modeling software used for creating 3D models.",
                 "The primary image editing software used for creating textures and GUI elements.",
                 "The primary build automation tool used for managing dependencies and building the project.",
-                "The IDE used to develop the Processing sketch that reads capacitive touch sensor data from an Arduino and dispatches it to the Battleship client."
+                "The IDE used to develop the Processing sketch that reads capacitive touch sensor data from an Arduino and dispatches it to the Battleship client.",
+                "The version control software used."
             ]
         }
     },
     "Space Science Game": {
         "collaborators": [
-            "volemyu"
+            "Volemyu"
         ],
         "collaboratorHints": [
             "Developed custom title screen music and helped with audio pre-processing."
@@ -411,22 +419,24 @@
             "frameworks": [
                 "React",
                 "React Router",
-                "React-GA4",
-                "Apollo Client (Pending)"
+                "React Google Analytics 4",
+                "Apollo Client"
             ],
             "frameworkHints": [
                 "The core of the web page.",
                 "Simplifying some features like switching pages.",
                 "Allows measurement of metrics",
-                "Planned GraphQL integration with GitHub and LinkedIn."
+                "Planned GraphQL integration with GitHub and LinkedIn (not implemented yet)."
             ],
             "tools": [
                 "Visual Studio Code",
-                "NPM"
+                "NPM",
+                "Git"
             ],
             "toolHints": [
                 "The primary IDE used for development.",
-                "The primary build automation tool used for managing dependencies and building the project."
+                "The primary build automation tool used for managing dependencies and building the project.",
+                "The version control software used."
             ]
         }
     },
@@ -489,11 +499,13 @@
             ],
             "tools": [
                 "Arduino IDE",
-                "XCode"
+                "XCode",
+                "Git"
             ],
             "toolHints": [
                 "The primary IDE used for the microcontroller development, used ot manage dependencies and build the project.",
-                "The primary IDE used for the iOS development, used to manage dependencies and build the project."
+                "The primary IDE used for the iOS development, used to manage dependencies and build the project.",
+                "The version control software used."
             ]
         }
     },
@@ -573,11 +585,13 @@
             ],
             "tools": [
                 "IntelliJ IDEA",
-                "Maven"
+                "Maven",
+                "Git"
             ],
             "toolHints": [
                 "The primary IDE used for development.",
-                "The primary build automation tool used for managing dependencies and building the project."
+                "The primary build automation tool used for managing dependencies and building the project.",
+                "The version control software used."
             ]
         }
     },

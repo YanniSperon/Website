@@ -1,6 +1,83 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './Home.css';
+
+const AutoScroll = ({ images, speed = 0.25 }) => {
+    const containerRef = useRef(null);
+    const directionRef = useRef(1);
+    const scrollWidthRef = useRef(0);
+    const clientWidthRef = useRef(0);
+    const scrollPosRef = useRef(0);
+
+    useEffect(() => {
+        const container = containerRef.current;
+        if (!container) return;
+
+        // Set initial dimensions and scroll position
+        scrollWidthRef.current = container.scrollWidth;
+        clientWidthRef.current = container.clientWidth;
+        scrollPosRef.current = container.scrollLeft;
+
+        // Add or remove class based on overflow
+        const updateOverflowClass = () => {
+            if (container.scrollWidth > container.clientWidth) {
+                container.classList.add('overflowing');
+            } else {
+                container.classList.remove('overflowing');
+            }
+        };
+
+        updateOverflowClass();
+
+        let animationFrameId;
+
+        const scroll = () => {
+            const maxScrollLeft = scrollWidthRef.current - clientWidthRef.current;
+
+            // Update scroll position manually with float precision
+            scrollPosRef.current += directionRef.current * speed;
+
+            // Clamp direction and bounds
+            if (scrollPosRef.current >= maxScrollLeft) {
+                scrollPosRef.current = maxScrollLeft;
+                directionRef.current = -1;
+            } else if (scrollPosRef.current <= 0) {
+                scrollPosRef.current = 0;
+                directionRef.current = 1;
+            }
+
+            // Apply to actual DOM
+            container.scrollLeft = scrollPosRef.current;
+
+            animationFrameId = requestAnimationFrame(scroll);
+        };
+
+        animationFrameId = requestAnimationFrame(scroll);
+
+        // Resize observer to keep dimensions up-to-date
+        const resizeObserver = new ResizeObserver(() => {
+            scrollWidthRef.current = container.scrollWidth;
+            clientWidthRef.current = container.clientWidth;
+            updateOverflowClass();
+        });
+        resizeObserver.observe(container);
+
+        return () => {
+            cancelAnimationFrame(animationFrameId);
+            resizeObserver.disconnect();
+        };
+    }, [speed]);
+
+    return (
+        <div className="auto-scroll-container" ref={containerRef}>
+            <div className="auto-scroll-row">
+                {images.map((src, i) => (
+                    <img key={i} src={src} alt="" className="scroll-image" />
+                ))}
+            </div>
+        </div>
+    );
+};
 
 function PlaceImageDisplay({ version, imageIndex, name }) {
     const url = version.pictureURLs[imageIndex];
@@ -44,7 +121,7 @@ function VersionToImageCategoryString(version) {
     }
 }
 
-function Project({ projects, handleLinkClick }) {
+function Project({ projects, handleLinkClick, icons }) {
     const { projectName } = useParams();
     const project = projects[projectName];
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -100,9 +177,17 @@ function Project({ projects, handleLinkClick }) {
         );
     }
 
+    const allIcons = Array.from(new Set([
+        ...(currentVersion.primaryLanguages || []),
+        ...(currentVersion.frameworks || []),
+        ...(currentVersion.tools || [])
+    ].map(icon => icons[icon])));
+
     return (
         <div className="container project-details">
             <h1 className='contactInfoLabel'>{projectName}</h1>
+
+            <AutoScroll images={allIcons} />
 
             {/* Version selector */}
             {versionKeys.length > 1 && (
@@ -172,7 +257,14 @@ function Project({ projects, handleLinkClick }) {
                     <h2 className='contactInfoLabel'>Primary Languages</h2>
                     <ul>
                         {currentVersion.primaryLanguages.map((language, index) => (
-                            <li key={index}>{language}</li>
+                            <li key={index} className="iconWithText">
+                                <img
+                                    className="icon"
+                                    alt=""
+                                    src={icons[language]}
+                                />
+                                {language}
+                            </li>
                         ))}
                     </ul>
                 </div>
@@ -184,7 +276,12 @@ function Project({ projects, handleLinkClick }) {
                     <h2 className='contactInfoLabel'>Frameworks</h2>
                     <ul>
                         {currentVersion.frameworks.map((framework, index) => (
-                            <li key={index}>
+                            <li key={index} className="iconWithText">
+                                <img
+                                    className="icon"
+                                    alt=""
+                                    src={icons[framework]}
+                                />
                                 {framework}
                                 {currentVersion.frameworkHints && currentVersion.frameworkHints[index] && (
                                     <span className="hint"> - {currentVersion.frameworkHints[index]}</span>
@@ -201,7 +298,12 @@ function Project({ projects, handleLinkClick }) {
                     <h2 className='contactInfoLabel'>Tools</h2>
                     <ul>
                         {currentVersion.tools.map((tool, index) => (
-                            <li key={index}>
+                            <li key={index} className="iconWithText">
+                                <img
+                                    className="icon"
+                                    alt=""
+                                    src={icons[tool]}
+                                />
                                 {tool}
                                 {currentVersion.toolHints && currentVersion.toolHints[index] && (
                                     <span className="hint"> - {currentVersion.toolHints[index]}</span>
@@ -237,18 +339,16 @@ function Project({ projects, handleLinkClick }) {
                     <h2 className='contactInfoLabel'>Collaborators</h2>
                     <ul>
                         {project.collaborators.map((collaborator, index) => (
-                            <a
+                            <button
                                 key={collaborator}
-                                href={project.collaboratorLinks[index]}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="github-link relatedProjectsLink centeredText"
+                                onClick={() => handleLinkClick(project.collaboratorLinks[index])}
+                                className="github-link relatedProjectsLink centeredText buttonFix"
                             >
                                 {collaborator}
                                 {project.collaboratorHints && project.collaboratorHints[index] && (
                                     <span className="hintInner"> - {project.collaboratorHints[index]}</span>
                                 )}
-                            </a>
+                            </button>
                         ))}
                     </ul>
                 </div>
