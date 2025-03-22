@@ -181,7 +181,13 @@ function Project({ projects, handleLinkClick, icons }) {
         ...(currentVersion.primaryLanguages || []),
         ...(currentVersion.frameworks || []),
         ...(currentVersion.tools || [])
-    ].map(icon => icons[icon])));
+    ].map(icon => {
+        if (icon === null || icons === "" || !(icon in icons)) {
+            return icons["Fallback"];
+        } else {
+            return icons[icon];
+        }
+    })));
 
     return (
         <div className="container project-details">
