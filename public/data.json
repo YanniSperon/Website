@@ -30,9 +30,8 @@
         "Opportunities in high-performance computing, low-latency systems, and large-scale software architecture, leveraging deep expertise in C++ and systems-level programming."
     ],
     "favoriteProjects": [
-        "Networked Battleship",
-        "Smart Bike Helmet",
-        "Atlas Game Engine",
+        "Andromeda Game Engine",
+        "Dynama Physics Engine",
         "Fractyne"
     ],
     "ongoingProjects": [
@@ -43,6 +42,11 @@
         },
         {
             "name": "Fractyne",
+            "privacy": "Confidential",
+            "status": "In Progress"
+        },
+        {
+            "name": "Andromeda Game Engine",
             "privacy": "Confidential",
             "status": "In Progress"
         }

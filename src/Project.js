@@ -205,7 +205,7 @@ function Project({ projects, handleLinkClick, icons }) {
                                 className={`ResumeButton ${selectedVersion === version ? 'active' : ''}`}
                                 onClick={() => handleVersionChange(version)}
                             >
-                                {version}
+                                {project[version] && project[version].name ? project[version].name : version}
                             </button>
                         ))}
                     </div>
@@ -216,7 +216,7 @@ function Project({ projects, handleLinkClick, icons }) {
             {currentVersion.changes && (
                 <div>
                     <h2 className='contactInfoLabel'>Changes in this version</h2>
-                    <h4 className='projectDescription'>{currentVersion.changes}</h4>
+                    <h4 className='projectDescription versionChanges'>{currentVersion.changes}</h4>
                 </div>
             )}
 
@@ -244,9 +244,13 @@ function Project({ projects, handleLinkClick, icons }) {
                     <h2 className='contactInfoLabel'>{VersionToImageCategoryString(currentVersion)}</h2>
                     <div className="slideshow-container-background">
                         <div className="slideshow-container">
-                            <button className="prev" onClick={handlePrevImage}>&#10094;</button>
+                            {currentVersion.pictureURLs.length > 1 && (
+                                <button className="prev" onClick={handlePrevImage}>&#10094;</button>
+                            )}
                             <PlaceImageDisplay version={currentVersion} imageIndex={currentImageIndex} name={projectName} />
-                            <button className="next" onClick={handleNextImage}>&#10095;</button>
+                            {currentVersion.pictureURLs.length > 1 && (
+                                <button className="next" onClick={handleNextImage}>&#10095;</button>
+                            )}
                         </div>
                     </div>
                     {currentVersion.pictureDescriptions && currentVersion.pictureDescriptions[currentImageIndex] && (

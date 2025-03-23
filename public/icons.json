@@ -29,6 +29,7 @@
     "JUCE": "./juce.png",
     "ImGui": "./imgui.png",
     "FreeType": "./freetype.png",
+    "GTK": "./gtk.png",
 
     "IntelliJ IDEA": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg",
     "Maven": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original.svg",

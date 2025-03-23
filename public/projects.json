@@ -1,4 +1,249 @@
 {
+    "Andromeda Game Engine": {
+        "collaborators": [
+        ],
+        "collaboratorHints": [
+        ],
+        "collaboratorLinks": [
+        ],
+        "highlighted": true,
+        "thumbnailURL": "https://github.com/YanniSperon/OpenGL-Playground/blob/cfd05de03fdc07cde120421021fc6916d6699056/Demo/andromeda.png?raw=true",
+        "relatedProjects": [
+            "Dynama Physics Engine",
+            "Iris GUI Framework",
+            "Atlas Game Engine"
+        ],
+        "relatedProjectHints": [
+            "The physics engine currently being created for integration with Andromeda.",
+            "The GUI framework currently being created for integration with Andromeda.",
+            "This engine's predecessor that shares almost no code."
+        ],
+        "Version 1": {
+            "name": "Rendering Engine",
+            "githubURL": "https://github.com/YanniSperon/OpenGL-Playground",
+            "pictureURLs": [
+                "https://github.com/YanniSperon/OpenGL-Playground/raw/refs/heads/master/Demo/andromedarendering.mp4"
+            ],
+            "pictureDescriptions": [
+                "Demonstration of physically-based rendering (PBR), cube map reflections, multiple lights with custom colors, diffuse and specular sampling with a pre-filtered environment map and generation of the BRDF LUT."
+            ],
+            "description": "A self-taught learning endeavor built from the ground up in C++ and OpenGL, the Andromeda game engine expands upon its predecessor with advanced 3D rendering techniques and robust toolsets. Built with performance as a major consideration, it implements physically-based rendering (PBR), cube map reflections, multiple lights with custom colors, diffuse and specular sampling with a pre-filtered environment map and generation of the BRDF LUT. Future updates will integrate the Dynama physics engine and the Iris GUI framework, two separate projects currently in development.",
+            "components": [
+                "A self-taught learning endeavor developed entirely in C++ and OpenGL",
+                "Andromeda is a custom game engine that builds on a previous version with significant improvements",
+                "Features advanced 3D rendering techniques",
+                "Includes a robust set of development tool sets",
+                "Designed with performance as a core priority",
+                "Implements physically-based rendering (PBR)",
+                "Supports cube map reflections",
+                "Handles multiple dynamic lights with custom color support",
+                "Performs diffuse and specular sampling using a pre-filtered environment map",
+                "Generates a BRDF lookup table (LUT) for accurate lighting",
+                "Planned future updates include integration of the Dynama physics engine",
+                "Future versions will also incorporate the Iris GUI framework",
+                "Both Dynama and Iris are separate projects currently in active development"
+            ],
+            "projectStart": "2020-12-09",
+            "projectEnd": "2021-07-14",
+            "primaryLanguages": [
+                "C++",
+                "GLSL"
+            ],
+            "frameworks": [
+                "OpenGL",
+                "ImGui",
+                "GLFW",
+                "GLEW",
+                "GLM"
+            ],
+            "frameworkHints": [
+                "The core rendering/shading functionality.",
+                "Basic 2D user interface rendering.",
+                "Basic cross-platform window creation and deletion.",
+                "Used to load OpenGL functions.",
+                "Basic SIMD accelerated vector/matrix functionality."
+            ],
+            "tools": [
+                "Visual Studio 2022",
+                "Premake",
+                "Git"
+            ],
+            "toolHints": [
+                "The primary IDE used for application development in C++, including OpenGL and JUCE projects.",
+                "The build system used to manage dependencies and generate project files for cross-platform development.",
+                "The version control software used."
+            ]
+        },
+        "Version 2": {
+            "changes": "The scene editor frontend and node based backend functionality.",
+            "name": "Scene Editor",
+            "githubURL": "https://github.com/YanniSperon/Engine-GUI-Test",
+            "pictureURLs": [
+                "https://github.com/YanniSperon/Engine-GUI-Test/raw/refs/heads/master/Demo/sceneeditor.mp4"
+            ],
+            "pictureDescriptions": [
+                "Demonstration of the node based hierarchy that allows inherited positions and any number of objects and lights with custom mesh importing."
+            ],
+            "description": "A self-taught learning endeavor built from the ground up in C++ and OpenGL, the Andromeda game engine expands upon its predecessor with advanced 3D rendering techniques and robust toolsets. Built with performance as a major consideration, it implements physically-based rendering (PBR), cube map reflections, multiple lights with custom colors, diffuse and specular sampling with a pre-filtered environment map and generation of the BRDF LUT. Future updates will integrate the Dynama physics engine and the Iris GUI framework, two separate projects currently in development.",
+            "components": [
+                "A self-taught learning endeavor developed entirely in C++ and OpenGL",
+                "Andromeda is a custom game engine that builds on a previous version with significant improvements",
+                "Features advanced 3D rendering techniques",
+                "Includes a robust set of development tool sets",
+                "Designed with performance as a core priority",
+                "Implements physically-based rendering (PBR)",
+                "Supports cube map reflections",
+                "Handles multiple dynamic lights with custom color support",
+                "Performs diffuse and specular sampling using a pre-filtered environment map",
+                "Generates a BRDF lookup table (LUT) for accurate lighting",
+                "Planned future updates include integration of the Dynama physics engine",
+                "Future versions will also incorporate the Iris GUI framework",
+                "Support for many texture formats and raw images",
+                "Custom window icons",
+                "Both Dynama and Iris are separate projects currently in active development"
+            ],
+            "projectStart": "2020-09-22",
+            "projectEnd": "2021-01-22",
+            "primaryLanguages": [
+                "C++",
+                "GLSL"
+            ],
+            "frameworks": [
+                "OpenGL",
+                "ImGui",
+                "GLFW",
+                "GLEW",
+                "GLM"
+            ],
+            "frameworkHints": [
+                "The core rendering/shading functionality.",
+                "Basic 2D user interface rendering.",
+                "Basic cross-platform window creation and deletion.",
+                "Used to load OpenGL functions.",
+                "Basic SIMD accelerated vector/matrix functionality."
+            ],
+            "tools": [
+                "Visual Studio 2022",
+                "Premake",
+                "Git"
+            ],
+            "toolHints": [
+                "The primary IDE used for application development in C++, including OpenGL and JUCE projects.",
+                "The build system used to manage dependencies and generate project files for cross-platform development.",
+                "The version control software used."
+            ]
+        },
+        "Version 3": {
+            "changes": "Simple landscape generation using libnoise to later be integrated into the main Andromeda engine.",
+            "name": "Landscape Generation",
+            "githubURL": "https://github.com/YanniSperon/ProceduralGeneration",
+            "pictureURLs": [
+                "https://github.com/YanniSperon/ProceduralGeneration/raw/refs/heads/master/Demo/white.mp4",
+                "https://github.com/YanniSperon/ProceduralGeneration/raw/refs/heads/master/Demo/normal.mp4"
+            ],
+            "pictureDescriptions": [
+                "Populating 263,169 vertices with noise based on X and Z position. Cycling through frequency changes.",
+                "Shading with the world-space normals. Populating 263,169 vertices with noise based on X and Z position. Cycling through frequency changes."
+            ],
+            "description": "A self-taught learning endeavor built from the ground up in C++ and OpenGL, the Andromeda game engine expands upon its predecessor with advanced 3D rendering techniques and robust toolsets. Built with performance as a major consideration, it implements physically-based rendering (PBR), cube map reflections, multiple lights with custom colors, diffuse and specular sampling with a pre-filtered environment map and generation of the BRDF LUT. Future updates will integrate the Dynama physics engine and the Iris GUI framework, two separate projects currently in development.",
+            "components": [
+                "A self-taught learning endeavor developed entirely in C++ and OpenGL",
+                "Andromeda is a custom game engine that builds on a previous version with significant improvements",
+                "Features advanced 3D rendering techniques",
+                "Includes a robust set of development tool sets",
+                "Designed with performance as a core priority",
+                "Implements physically-based rendering (PBR)",
+                "Supports cube map reflections",
+                "Handles multiple dynamic lights with custom color support",
+                "Performs diffuse and specular sampling using a pre-filtered environment map",
+                "Generates a BRDF lookup table (LUT) for accurate lighting",
+                "Planned future updates include integration of the Dynama physics engine",
+                "Future versions will also incorporate the Iris GUI framework",
+                "Both Dynama and Iris are separate projects currently in active development",
+                "Landscape generation through libnoise"
+            ],
+            "projectStart": "2023-03-21",
+            "projectEnd": "2023-05-11",
+            "primaryLanguages": [
+                "C++",
+                "GLSL"
+            ],
+            "frameworks": [
+                "OpenGL",
+                "GLFW",
+                "GLEW",
+                "libnoise"
+            ],
+            "frameworkHints": [
+                "The core rendering/shading functionality.",
+                "Basic cross-platform window creation and deletion.",
+                "Used to load OpenGL functions.",
+                "Used to generate Perlin noise."
+            ],
+            "tools": [
+                "Visual Studio 2022",
+                "Premake",
+                "Git"
+            ],
+            "toolHints": [
+                "The primary IDE used for application development in C++, including OpenGL and JUCE projects.",
+                "The build system used to manage dependencies and generate project files for cross-platform development.",
+                "The version control software used."
+            ]
+        },
+        "Version 4": {
+            "changes": "The window management backend of of Andromeda engine.",
+            "name": "Window Management",
+            "githubURL": "https://github.com/YanniSperon/AndromedaV2",
+            "pictureURLs": [
+                "https://github.com/YanniSperon/AndromedaV2/raw/refs/heads/master/Demo/windowmanagement.mp4"
+            ],
+            "pictureDescriptions": [
+                "Demonstration of creating multiple windows, each with different OpenGL contexts."
+            ],
+            "description": "A self-taught learning endeavor built from the ground up in C++ and OpenGL, the Andromeda game engine expands upon its predecessor with advanced 3D rendering techniques and robust toolsets. Built with performance as a major consideration, it implements physically-based rendering (PBR), cube map reflections, multiple lights with custom colors, diffuse and specular sampling with a pre-filtered environment map and generation of the BRDF LUT. Future updates will integrate the Dynama physics engine and the Iris GUI framework, two separate projects currently in development.",
+            "components": [
+                "A self-taught learning endeavor developed entirely in C++ and OpenGL",
+                "Andromeda is a custom game engine that builds on a previous version with significant improvements",
+                "Features advanced 3D rendering techniques",
+                "Includes a robust set of development tool sets",
+                "Designed with performance as a core priority",
+                "Implements physically-based rendering (PBR)",
+                "Supports cube map reflections",
+                "Handles multiple dynamic lights with custom color support",
+                "Performs diffuse and specular sampling using a pre-filtered environment map",
+                "Generates a BRDF lookup table (LUT) for accurate lighting",
+                "Planned future updates include integration of the Dynama physics engine",
+                "Future versions will also incorporate the Iris GUI framework",
+                "Both Dynama and Iris are separate projects currently in active development"
+            ],
+            "projectStart": "2021-01-18",
+            "projectEnd": "2023-03-07",
+            "primaryLanguages": [
+                "C++"
+            ],
+            "frameworks": [
+                "OpenGL",
+                "GLFW",
+                "GLEW"
+            ],
+            "frameworkHints": [
+                "The core rendering/shading functionality.",
+                "Basic cross-platform window creation and deletion.",
+                "Used to load OpenGL functions."
+            ],
+            "tools": [
+                "Visual Studio 2022",
+                "Premake",
+                "Git"
+            ],
+            "toolHints": [
+                "The primary IDE used for application development in C++, including OpenGL and JUCE projects.",
+                "The build system used to manage dependencies and generate project files for cross-platform development.",
+                "The version control software used."
+            ]
+        }
+    },
     "Atlas Game Engine": {
         "collaborators": [
         ],
@@ -24,7 +269,7 @@
                 "A demonstration of the complex model and texture loading as well as the animations.",
                 "A demonstration of the scene editor as well as the physics simulation."
             ],
-            "description": "This project was a self-directed learning experience in C++ and OpenGL, developed between October and December 2019. The primary goal was to build a functional 3D rendering engine while gaining hands-on experience with graphics programming. The project served as a foundational step in understanding graphics programming and game engine development, completed within the self-imposed deadline of a high school semester.",
+            "description": "This project was a self-directed learning experience in C++ and OpenGL. The primary goal was to build a functional 3D rendering engine while gaining hands-on experience with graphics programming. The project served as a foundational step in understanding graphics programming and game engine development, completed within the self-imposed deadline of two months.",
             "components": [
                 "Blinn-Phong lighting model implemented for rudimentary realistic shading.",
                 "Bullet physics integration for dynamic object interactions and 3D environment simulation.",
@@ -67,6 +312,180 @@
             ]
         }
     },
+    "Dynama Physics Engine": {
+        "collaborators": [
+        ],
+        "collaboratorHints": [
+        ],
+        "collaboratorLinks": [
+        ],
+        "highlighted": true,
+        "thumbnailURL": "./dynama.png",
+        "relatedProjects": [
+            "Andromeda Game Engine",
+            "Iris GUI Framework"
+        ],
+        "relatedProjectHints": [
+            "The game engine that Dynama will be integrated with eventually.",
+            "The framework that is being developed alongside Dynama to also be integrated into Andromeda."
+        ],
+        "Version 1": {
+            "changes": "",
+            "githubURL": "",
+            "pictureURLs": [],
+            "pictureDescriptions": [],
+            "description": "Currently a work in progress. A high-performance physics module originally developed for Andromeda Game Engine. It features broad-phase collision detection via AABB and spherical bounding volumes organized in an octree, followed by precise narrow-phase checks. It supports both rigid and soft body simulations, leveraging SIMD accelerations where applicable to ensure optimal real-time performance in complex scenes.",
+            "components": [
+                "Broad phase collision detection",
+                "Octree comprised of axis-aligned bounding boxes and spherical bounding volumes",
+                "Narrow-phase collision detection",
+                "Collision resolution (Incomplete)",
+                "Rigid body simulations (Incomplete)",
+                "Soft body simulations (Incomplete)"
+            ],
+            "projectStart": "2025-01-08",
+            "projectEnd": "Now",
+            "primaryLanguages": [
+                "C++",
+                "GLSL"
+            ],
+            "frameworks": [
+                "OpenGL",
+                "GLAD",
+                "GLFW",
+                "ImGui"
+            ],
+            "frameworkHints": [
+                "The core rendering/shading functionality to view simulations and make sure they are functional.",
+                "Used to load OpenGL functions.",
+                "Used to create and manage windows.",
+                "Basic debug GUI display."
+            ],
+            "tools": [
+                "Visual Studio 2022",
+                "CMake",
+                "Git"
+            ],
+            "toolHints": [
+                "The primary IDE used for application development in C++, including OpenGL and JUCE projects.",
+                "The build system used to manage dependencies and generate project files for cross-platform development.",
+                "The version control software used."
+            ]
+        }
+    },
+    "Iris GUI Framework": {
+        "collaborators": [
+        ],
+        "collaboratorHints": [
+        ],
+        "collaboratorLinks": [
+        ],
+        "highlighted": true,
+        "thumbnailURL": "./iris.png",
+        "relatedProjects": [
+            "Andromeda Game Engine",
+            "Dynama Physics Engine"
+        ],
+        "relatedProjectHints": [
+            "The game engine that Dynama will be integrated with eventually.",
+            "The physics engine that is being developed alongside Dynama to also be integrated into Andromeda."
+        ],
+        "Version 1": {
+            "changes": "",
+            "githubURL": "https://github.com/YanniSperon/GUI",
+            "pictureURLs": [
+                "https://github.com/YanniSperon/GUI/raw/refs/heads/master/Demo/buttonclicking.mp4",
+                "https://github.com/YanniSperon/GUI/raw/refs/heads/master/Demo/textwrapping.mp4"
+            ],
+            "pictureDescriptions": [
+                "Stylized button with outline, an inner text element, and some stylized (border, radius, color) elements on the rest of the screen. All sized and placed with custom layout system.",
+                "Stylized container elements for layouts with an inner text element that word wraps dynamically as the text size increases."
+            ],
+            "description": "Currently a work in progress, but has not been worked on in a while. A modular GUI framework designed for real-time applications with static rendering, featuring a node-based layer system. It supports modifiable constraints, event propagation, and a flexible hierarchy. Current components include an empty view, image view, text view, and a button view with event callbacks. The text system uses FreeType to render glyphs, and supports cached fonts, DPI scaling, text rendering, and font atlases. Iris also supports gestures and currently runs on OpenGL.",
+            "components": [
+                "A modular GUI framework",
+                "Static rendering, recalculated only on updates.",
+                "Node-based layer system.",
+                "Element styling (borders, colors, ",
+                "Modifiable constraints, event propagation, and a flexible hierarchy.",
+                "Current components include an empty view (custom background/spacing), image view, text view, and a button view with event callbacks.",
+                "FreeType glyph rendering",
+                "Supports cached fonts, DPI scaling, text rendering, and font atlases.",
+                "Supports gestures."
+            ],
+            "projectStart": "2020-12-07",
+            "projectEnd": "2020-07-18",
+            "primaryLanguages": [
+                "C++",
+                "GLSL"
+            ],
+            "frameworks": [
+                "OpenGL",
+                "GLEW",
+                "GLFW",
+                "GLM"
+            ],
+            "frameworkHints": [
+                "The core rendering/shading functionality to view simulations and make sure they are functional.",
+                "Used to load OpenGL functions.",
+                "Used to create and manage windows.",
+                "SIMD accelerated linear algebra library."
+            ],
+            "tools": [
+                "Visual Studio 2022",
+                "CMake",
+                "Git"
+            ],
+            "toolHints": [
+                "The primary IDE used for application development in C++, including OpenGL and JUCE projects.",
+                "The build system used to manage dependencies and generate project files for cross-platform development.",
+                "The version control software used."
+            ]
+        }
+    },
+    "Zeus Quantitative Analysis Engine": {
+        "collaborators": [
+        ],
+        "collaboratorHints": [
+        ],
+        "collaboratorLinks": [
+        ],
+        "highlighted": true,
+        "thumbnailURL": "./zeus.png",
+        "relatedProjects": [
+        ],
+        "relatedProjectHints": [
+        ],
+        "Version 1": {
+            "changes": "",
+            "githubURL": "",
+            "pictureURLs": [],
+            "pictureDescriptions": [],
+            "description": "Started to self-teach the world of Quantitative Finance specifically pertaining to high-frequency trading. Aiming to be a high-performance C++ framework designed for building, testing, and analyzing quantitative trading strategies. It should combine a modular back-tester, a fast Monte Carlo option pricer with Greek and volatility surface support, and a realistic exchange simulator with a fully functional limit order book. It should be built for speed and extensibility, and should provide the infrastructure to explore the full lifecycle of modern quantitative trading.",
+            "components": [],
+            "projectStart": "2025-03-20",
+            "projectEnd": "Now",
+            "primaryLanguages": [
+                "C++"
+            ],
+            "frameworks": [
+                "GTK"
+            ],
+            "frameworkHints": [
+                "User interface functionality."
+            ],
+            "tools": [
+                "Visual Studio 2022",
+                "CMake",
+                "Git"
+            ],
+            "toolHints": [
+                "The primary IDE used for application development in C++.",
+                "The build system used to manage dependencies and generate project files for cross-platform development.",
+                "The version control software used."
+            ]
+        }
+    },
     "Fractyne": {
         "collaborators": [
         ],
@@ -75,7 +494,7 @@
         "collaboratorLinks": [
         ],
         "highlighted": true,
-        "thumbnailURL": "https://github.com/user-attachments/assets/e8ad19ac-e1e2-4f67-84ef-171df52a88c1",
+        "thumbnailURL": "./fractyne.png",
         "relatedProjects": [
             "Atlas Game Engine"
         ],
@@ -90,7 +509,7 @@
             "description": "A standalone shader tool application currently a work in progress.",
             "components": [],
             "projectStart": "2025-02-24",
-            "projectEnd": "Present",
+            "projectEnd": "Now",
             "primaryLanguages": [
                 "C++",
                 "GLSL"
@@ -135,6 +554,7 @@
             "Networking server and client code used as a jumping off point and greatly changed."
         ],
         "Version 1": {
+            "name": "Original Game",
             "changes": "",
             "githubURL": "https://github.com/YanniSperon/Battleship",
             "pictureURLs": [
@@ -228,6 +648,7 @@
             ]
         },
         "Version 2": {
+            "name": "Body Tattoo Integration",
             "changes": "Changed controls and added a translation layer to allow a unique input device. Meant to demonstrate the potential capabilities of capacitive body tattoos",
             "githubURL": "https://github.com/YanniSperon/BodyTattooBattleship",
             "pictureURLs": [
@@ -614,7 +1035,7 @@
             "description": "Soon to be added, lots of projects have already been completed and have had hundreds of hours sunk into them. It is just a matter of writing the descriptions, formatting the JSON, and loading them into the website's database.",
             "components": [],
             "projectStart": "2020-03-15",
-            "projectEnd": "Present",
+            "projectEnd": "Now",
             "primaryLanguages": [
                 "C++",
                 "GLSL",
