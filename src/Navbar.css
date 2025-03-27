@@ -3,31 +3,31 @@ nav {
     width: 100%;
 }
 
-.navLink {
-    flex: 1;
-    display: flex;
-    text-decoration: none;
-}
-
 .linkButton {
     flex: 1;
     text-align: center;
     font-family: 'Roboto Mono', monospace;
     font-weight: 1200;
     font-style: normal;
-    font-size: 12pt;
     line-height: 275%;
-    color: rgb(255, 255, 255);
-    background-color: #546eff;
+    color: white;
+    background-color: #2980b9;
     cursor: pointer;
+    border: none;
+    font-size: 28pt;
+    padding: 6pt 12pt;
+    outline: black 4px solid;
+    outline-offset: -2px;
 }
 
 .selectedButton {
-    background-color: #3d4fb8;
+    background-color: #164564;
 }
 
 .navLink {
     flex: 1;
+    display: flex;
+    text-decoration: none;
 }
 
 .navbar {
@@ -41,6 +41,7 @@ nav {
 
 .navbar a:hover {
     text-decoration: underline;
+    text-decoration-color: white;
 }
 
 /* Dark mode styles */
@@ -72,27 +73,6 @@ nav {
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
-}
-
-.navLink {
-    text-decoration: none;
-}
-
-.linkButton {
-    background: none;
-    border: none;
-    font-weight: 1200;
-    font-size: 28pt;
-    cursor: pointer;
-    padding: 6pt 12pt;
-    color: white;
-    background-color: #546eff;
-    outline: black 4px solid;
-    outline-offset: -2px;
-}
-
-.selectedButton {
-    background-color: #3d4fb8;
 }
 
 @media (max-width: 850px) {

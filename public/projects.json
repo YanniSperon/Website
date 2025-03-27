@@ -331,9 +331,13 @@
         ],
         "Version 1": {
             "changes": "",
-            "githubURL": "",
-            "pictureURLs": [],
-            "pictureDescriptions": [],
+            "githubURL": "https://github.com/YanniSperon/Algorithms",
+            "pictureURLs": [
+                "./basic.mp4"
+            ],
+            "pictureDescriptions": [
+                "A demonstration of the Jarvis March and Monotone Chain algorithms in 2D."
+            ],
             "description": "Currently a work in progress. A high-performance physics module originally developed for Andromeda Game Engine. It features broad-phase collision detection via AABB and spherical bounding volumes organized in an octree, followed by precise narrow-phase checks. It supports both rigid and soft body simulations, leveraging SIMD accelerations where applicable to ensure optimal real-time performance in complex scenes.",
             "components": [
                 "Broad phase collision detection",
@@ -469,7 +473,7 @@
                 "C++"
             ],
             "frameworks": [
-                "GTK"
+                "ImGui"
             ],
             "frameworkHints": [
                 "User interface functionality."

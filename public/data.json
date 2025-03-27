@@ -51,6 +51,12 @@
             "status": "In Progress"
         }
     ],
+    "pendingProjects": [
+        {
+            "name": "Zeus Quantitative Analysis Engine",
+            "reason": "Learning Background"
+        }
+    ],
     "contactInfo": {
         "email": "yannisperon@gmail.com",
         "linkedin": "https://www.linkedin.com/in/yanni-speron/",

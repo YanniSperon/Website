@@ -56,7 +56,7 @@ function Home({ data, projects, handleLinkClick }) {
             <ul>
                 {data.favoriteProjects.map((project, index) => (
                     <li className="centeredText" key={index}>
-                        <Link to={`/project/${project}`}>{project}</Link>
+                        <Link className="home-projects-link" to={`/project/${project}`}>{project}</Link>
                     </li>
                 ))}
             </ul>
@@ -65,8 +65,19 @@ function Home({ data, projects, handleLinkClick }) {
             <ul>
                 {data.ongoingProjects.map((project, index) => (
                     <li className="centeredText" key={index}>
-                        <Link to={`/project/${project.name}`}>
+                        <Link className="home-projects-link" to={`/project/${project.name}`}>
                             {project.name} - {project.status} ({project.privacy})
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+            
+            <h2 className="centeredText">Pending Projects</h2>
+            <ul>
+                {data.pendingProjects.map((project, index) => (
+                    <li className="centeredText" key={index}>
+                        <Link className="home-projects-link" to={`/project/${project.name}`}>
+                            {project.name} - {project.reason}
                         </Link>
                     </li>
                 ))}
