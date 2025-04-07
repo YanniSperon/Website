@@ -16,10 +16,10 @@ h1 {
 .grid-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 24pt;
+    padding-top: 12pt;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Use auto-fit instead of auto-fill */
-    gap: 12pt;
+    gap: 50pt;
     justify-content: center; /* Center items horizontally */
     justify-items: center;   /* Center individual items */
 }
