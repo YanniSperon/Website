@@ -1,5 +1,60 @@
 {
+    "Mortal Kombat 1": {
+        "isPersonal": false,
+        "collaborators": [
+        ],
+        "collaboratorHints": [
+        ],
+        "collaboratorLinks": [
+        ],
+        "highlighted": true,
+        "thumbnailURL": "https://cdn2.steamgriddb.com/icon/cad18507f7d4b59d153fbd18e9f5572a.ico",
+        "relatedProjects": [
+        ],
+        "relatedProjectHints": [
+        ],
+        "positionType": "Full-time",
+        "Version 1": {
+            "name": "Junior Associate Software Engineer",
+            "githubURL": "",
+            "pictureURLs": [
+                "mkcredits.jpg"
+            ],
+            "pictureDescriptions": [
+                "A screenshot of the game's credits."
+            ],
+            "description": "Worked full-time at a Warner Bros. Games subsidiary, NetherRealm Studios in an Agile environment. Designed new features, debugged systems, and worked alongside industry professionals on a massive C++ codebase in Unreal Engine 4 using JIRA and Perforce to stay organized.",
+            "components": [
+            ],
+            "projectStart": "Employed from August 2021",
+            "projectEnd": "June 2022",
+            "primaryLanguages": [
+                "C++"
+            ],
+            "frameworks": [
+                "Unreal Engine",
+                "Slate"
+            ],
+            "frameworkHints": [
+                "The core game engine the technology is built upon.",
+                "The user interface library used to expand editor functionality."
+            ],
+            "tools": [
+                "Visual Studio 2019",
+                "P4",
+                "Xbox Developer Kit",
+                "Playstation Developer Kit"
+            ],
+            "toolHints": [
+                "The primary IDE used for development in C++.",
+                "The version control software used.",
+                "The hardware used to test the game on Xbox.",
+                "The hardware used to test the game on PS4."
+            ]
+        }
+    },
     "Andromeda Game Engine": {
+        "isPersonal": true,
         "collaborators": [
         ],
         "collaboratorHints": [
@@ -245,6 +300,7 @@
         }
     },
     "Atlas Game Engine": {
+        "isPersonal": true,
         "collaborators": [
         ],
         "collaboratorHints": [
@@ -313,6 +369,7 @@
         }
     },
     "Dynama Physics Engine": {
+        "isPersonal": true,
         "collaborators": [
         ],
         "collaboratorHints": [
@@ -378,6 +435,7 @@
         }
     },
     "Iris GUI Framework": {
+        "isPersonal": true,
         "collaborators": [
         ],
         "collaboratorHints": [
@@ -448,6 +506,7 @@
         }
     },
     "Zeus Quantitative Analysis Engine": {
+        "isPersonal": true,
         "collaborators": [
         ],
         "collaboratorHints": [
@@ -491,6 +550,7 @@
         }
     },
     "Fractyne": {
+        "isPersonal": true,
         "collaborators": [
         ],
         "collaboratorHints": [
@@ -543,6 +603,7 @@
         }
     },
     "Networked Battleship": {
+        "isPersonal": true,
         "collaborators": [
         ],
         "collaboratorHints": [
@@ -747,6 +808,7 @@
         }
     },
     "Space Science Game": {
+        "isPersonal": true,
         "collaborators": [
             "Volemyu"
         ],
@@ -810,6 +872,7 @@
         }
     },
     "Professional Website Portfolio": {
+        "isPersonal": true,
         "collaborators": [
         ],
         "collaboratorHints": [
@@ -866,6 +929,7 @@
         }
     },
     "Smart Bike Helmet": {
+        "isPersonal": true,
         "collaborators": [
         ],
         "collaboratorHints": [
@@ -935,6 +999,7 @@
         }
     },
     "Group Messenger": {
+        "isPersonal": true,
         "collaborators": [
         ],
         "collaboratorHints": [
@@ -1021,6 +1086,7 @@
         }
     },
     "Many More Already Completed": {
+        "isPersonal": true,
         "collaborators": [
         ],
         "collaboratorHints": [

@@ -121,7 +121,30 @@ function VersionToImageCategoryString(version) {
     }
 }
 
-function Project({ projects, handleLinkClick, icons }) {
+function DisplayPositionType({project, isDarkMode}) {
+    if (isDarkMode) {
+        return <h4 style={{"color":"#1cfc03", "font-weight":"800"}} className='contactInfoLabel'>{project.positionType} Position</h4>
+    } else {
+        return <h4 style={{"color":"green", "font-weight":"800"}} className='contactInfoLabel'>{project.positionType} Position</h4>
+    }
+}
+
+function DisplayProjectTimeline({project, currentVersion, isDarkMode}) {
+    if (project.isPersonal) {
+        return <div>
+            <h2 className='contactInfoLabel'>Project Timeline</h2>
+            <h4 className='contactInfoLabel'>{currentVersion.projectStart} to {currentVersion.projectEnd}</h4>
+        </div>
+    } else {
+        return <div>
+            <h2 className='contactInfoLabel'>Work Timeline</h2>
+            <DisplayPositionType project={project} isDarkMode={isDarkMode}/>
+            <h4 className='contactInfoLabel'>{currentVersion.projectStart} to {currentVersion.projectEnd}</h4>
+        </div>
+    }
+}
+
+function Project({ projects, handleLinkClick, icons, isDarkMode }) {
     const { projectName } = useParams();
     const project = projects[projectName];
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -231,8 +254,7 @@ function Project({ projects, handleLinkClick, icons }) {
             )}
 
             {/* Project timeline */}
-            <h2 className='contactInfoLabel'>Project Timeline</h2>
-            <h4 className='contactInfoLabel'>{currentVersion.projectStart} to {currentVersion.projectEnd}</h4>
+            <DisplayProjectTimeline project={project} currentVersion={currentVersion} isDarkMode={isDarkMode}/>
 
             {/* Description */}
             <h2 className='contactInfoLabel'>Description</h2>

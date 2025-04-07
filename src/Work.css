@@ -18,10 +18,10 @@ h1 {
     margin: 0 auto;
     padding: 24pt;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Use auto-fit instead of auto-fill */
     gap: 12pt;
-    padding: 24pt;
-    justify-items: center;
+    justify-content: center; /* Center items horizontally */
+    justify-items: center;   /* Center individual items */
 }
 
 .projectsTitle {
@@ -33,6 +33,7 @@ h1 {
     color: inherit;
     width: 100%;
     max-width: 350px;
+    justify-self: center;
     /* Ensure each grid item has the same size */
 }
 

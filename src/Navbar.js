@@ -3,8 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import './Navbar.css';
 
 const LinksToNavMap = new Map([
-  ["/", "Home"],
-  ["/work", "Work"],
+  ["/home", "Home"],
+  ["/", "Work"],
   ["/contact", "Contact"]
 ]);
 

@@ -123,10 +123,10 @@ function App() {
                 <PageTracking />
                 <Navbar darkMode={darkMode} />
                 <Routes>
-                    <Route index element={<Home data={data} projects={projects} handleLinkClick={handleLinkClick} />} />
-                    <Route path="/work" element={<Work projects={projects} handleLinkClick={handleLinkClick} />} />
+                    <Route path="/home" element={<Home data={data} projects={projects} handleLinkClick={handleLinkClick} />} />
+                    <Route index element={<Work projects={projects} handleLinkClick={handleLinkClick} />} />
                     <Route path="/contact" element={<Contact data={data} handleLinkClick={handleLinkClick} />} />
-                    <Route path="/project/:projectName" element={<Project projects={projects} handleLinkClick={handleLinkClick} icons={icons}/>} />
+                    <Route path="/project/:projectName" element={<Project projects={projects} handleLinkClick={handleLinkClick} icons={icons} isDarkMode={darkMode}/>} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
                 <Footer />
