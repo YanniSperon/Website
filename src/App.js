@@ -2,7 +2,7 @@ import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import './App.css';
 import Navbar from './Navbar';
-import Home from './Home';
+import About from './About';
 import Work from './Work';
 import Contact from './Contact';
 import Project from './Project';
@@ -123,7 +123,7 @@ function App() {
                 <PageTracking />
                 <Navbar darkMode={darkMode} />
                 <Routes>
-                    <Route path="/home" element={<Home data={data} projects={projects} handleLinkClick={handleLinkClick} />} />
+                    <Route path="/about" element={<About data={data} projects={projects} handleLinkClick={handleLinkClick} />} />
                     <Route index element={<Work projects={projects} handleLinkClick={handleLinkClick} />} />
                     <Route path="/contact" element={<Contact data={data} handleLinkClick={handleLinkClick} />} />
                     <Route path="/project/:projectName" element={<Project projects={projects} handleLinkClick={handleLinkClick} icons={icons} isDarkMode={darkMode}/>} />

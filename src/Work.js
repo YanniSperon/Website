@@ -1,6 +1,6 @@
 import React from 'react';
 import './Work.css';
-import './Home.css';
+import './About.css';
 import { Link } from 'react-router-dom';
 
 function Work({ projects }) {

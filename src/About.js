@@ -1,9 +1,9 @@
-import './Home.css';
+import './About.css';
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-function Home({ data, projects, handleLinkClick }) {
+function About({ data, projects, handleLinkClick }) {
     const [showPopover, setShowPopover] = useState(false);
 
     useEffect(() => {
@@ -103,4 +103,4 @@ function Home({ data, projects, handleLinkClick }) {
     );
 }
 
-export default Home;
+export default About;

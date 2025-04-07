@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import './Home.css';
+import './About.css';
 
 const AutoScroll = ({ images, speed = 0.25 }) => {
     const containerRef = useRef(null);
