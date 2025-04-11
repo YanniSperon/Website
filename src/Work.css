@@ -20,8 +20,17 @@ h1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Use auto-fit instead of auto-fill */
     gap: 50pt;
-    justify-content: center; /* Center items horizontally */
-    justify-items: center;   /* Center individual items */
+    justify-content: center;
+    justify-items: center;
+}
+
+.two-items {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 70px;
+    row-gap: 0;
+    justify-content: center;
+    justify-items: center;
 }
 
 .projectsTitle {
@@ -185,7 +194,7 @@ h1 {
     }
 
     .ResumeButton {
-        font-size: 6pt !important;
+        font-size: 10pt !important;
     }
 }
 

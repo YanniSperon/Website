@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Work.css';
 import './About.css';
 import { Link } from 'react-router-dom';
 
 function Work({ projects }) {
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 666);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallScreen(window.innerWidth <= 666);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     if (!projects || projects.length === 0) {
         return <div className="work-container">
             <h1 className='projectsTitle'>Loading...</h1>;
@@ -12,8 +23,14 @@ function Work({ projects }) {
 
     return (
         <div className="work-container">
-            <h1 className="projectsTitle">Professional Work</h1>
-            <div className="grid-container">
+            <h1 className="projectsTitle">Full-Time Professional Work</h1>
+            <div
+                className={`grid-container ${
+                    !isSmallScreen && Object.entries(projects).filter(([_, v]) => !v.isPersonal).length === 2
+                        ? 'two-items'
+                        : ''
+                }`}
+            >
                 {Object.entries(projects).map(([k, v]) => {
                     if (!v.isPersonal) {
                         const backgroundImage = v.thumbnailURL ? `url(${v.thumbnailURL})` : 'none';

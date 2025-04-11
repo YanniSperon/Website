@@ -121,6 +121,18 @@ function VersionToImageCategoryString(version) {
     }
 }
 
+function DisplayProjectName({project, currentVersion, isDarkMode}) {
+    if (Object.keys(project).filter(key => key.startsWith('Version ')).length === 1) {
+        if (isDarkMode) {
+            return <h3 style={{"fontSize":"18pt", "color":"#1cfc03", "font-weight":"800"}} className='contactInfoLabel'>{currentVersion.name}</h3>
+        } else {
+            return <h3 style={{"fontSize":"18pt", "color":"green", "font-weight":"800"}} className='contactInfoLabel'>{currentVersion.name}</h3>
+        }
+    } else {
+        return null;
+    }
+}
+
 function DisplayPositionType({project, isDarkMode}) {
     if (isDarkMode) {
         return <h4 style={{"color":"#1cfc03", "font-weight":"800"}} className='contactInfoLabel'>{project.positionType} Position</h4>
@@ -137,7 +149,7 @@ function DisplayProjectTimeline({project, currentVersion, isDarkMode}) {
         </div>
     } else {
         return <div>
-            <h2 className='contactInfoLabel'>Work Timeline</h2>
+            <DisplayProjectName project={project} currentVersion={currentVersion} isDarkMode={isDarkMode}/>
             <DisplayPositionType project={project} isDarkMode={isDarkMode}/>
             <h4 className='contactInfoLabel'>{currentVersion.projectStart} to {currentVersion.projectEnd}</h4>
         </div>
@@ -249,7 +261,7 @@ function Project({ projects, handleLinkClick, icons, isDarkMode }) {
                     onClick={() => handleLinkClick(currentVersion.githubURL)}
                     className="github-link"
                 >
-                    View on GitHub
+                    {project.isPersonal ? ("View on GitHub") : ("View Company Site")}
                 </button>
             )}
 
@@ -258,7 +270,12 @@ function Project({ projects, handleLinkClick, icons, isDarkMode }) {
 
             {/* Description */}
             <h2 className='contactInfoLabel'>Description</h2>
-            <p className='projectDescription'>{currentVersion.description}</p>
+            {currentVersion.description.split('\n').map((line, idx) => (
+                <p className='projectDescription'>
+                  {line}
+                  <br />
+                </p>
+            ))}
 
             {/* Images/Photos */}
             {currentVersion.pictureURLs && currentVersion.pictureURLs.length > 0 && (

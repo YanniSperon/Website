@@ -59,7 +59,9 @@
     ],
     "contactInfo": {
         "email": "yannisperon@gmail.com",
-        "linkedin": "https://www.linkedin.com/in/yanni-speron/",
-        "phone": "+18475059019"
+        "linkedin": "https://linkedin.com/in/yanni-speron/",
+        "github": "https://github.com/YanniSperon",
+        "phone": "+1 (847) 505-9019",
+        "phoneLink": "+18475059019"
     }
 }

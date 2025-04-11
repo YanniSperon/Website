@@ -16,7 +16,7 @@
         "positionType": "Full-time",
         "Version 1": {
             "name": "Junior Associate Software Engineer",
-            "githubURL": "",
+            "githubURL": "https://www.netherrealm.com/",
             "pictureURLs": [
                 "mkcredits.jpg"
             ],
@@ -26,7 +26,7 @@
             "description": "Worked full-time at a Warner Bros. Games subsidiary, NetherRealm Studios in an Agile environment. Designed new features, debugged systems, and worked alongside industry professionals on a massive C++ codebase in Unreal Engine 4 using JIRA and Perforce to stay organized.",
             "components": [
             ],
-            "projectStart": "Employed from August 2021",
+            "projectStart": "August 2021",
             "projectEnd": "June 2022",
             "primaryLanguages": [
                 "C++"
@@ -50,6 +50,73 @@
                 "The version control software used.",
                 "The hardware used to test the game on Xbox.",
                 "The hardware used to test the game on PS4."
+            ]
+        }
+    },
+    "GetYourThing.com": {
+        "isPersonal": false,
+        "collaborators": [
+        ],
+        "collaboratorHints": [
+        ],
+        "collaboratorLinks": [
+        ],
+        "highlighted": true,
+        "thumbnailURL": "gyt.jpg",
+        "relatedProjects": [
+        ],
+        "relatedProjectHints": [
+        ],
+        "positionType": "Full-time",
+        "Version 1": {
+            "name": "Software Development Engineer",
+            "githubURL": "https://getyourthing.com/",
+            "pictureURLs": [
+                "gytpage.jpg"
+            ],
+            "pictureDescriptions": [
+                "A screenshot of the website's main page."
+            ],
+            "description": "Worked full-time as a Software Development Engineer at the eCommerce company GetYourThing, Inc. in an Agile environment. Debugged, designed, and implemented systems while leading other software engineers.\nLead developer of a recommendation and pricing engine in C++ that was 98% more efficient than existing software to increase user retention.\nLead full-stack developer of internal tools using Swift, UIKit, SpriteKit, and SceneKit including a warehouse management tool.\nCreated data manipulation tools using SQLite3 and Python. Implemented private data access REST API in Node.js.",
+            "components": [
+            ],
+            "projectStart": "November 2022",
+            "projectEnd": "November 2024",
+            "primaryLanguages": [
+                "C++",
+                "Python",
+                "JavaScript",
+                "Swift"
+            ],
+            "frameworks": [
+                "cpp-httplib",
+                "Node.js",
+                "SQLite3",
+                "UIKit",
+                "SceneKit",
+                "SpriteKit"
+            ],
+            "frameworkHints": [
+                "Used to implement efficient communication directly with the pricing and recommendation engine.",
+                "The runtime environment for an internal data manipulation tool.",
+                "The database engine used by the Node.js backend to store internal warehouse data.",
+                "The iOS framework used to implement the internal warehouse app.",
+                "The iOS 3D framework used to render a 3D map of the warehouse.",
+                "The iOS framework used to render 2D-elements over the 3D map"
+            ],
+            "tools": [
+                "Visual Studio 2022",
+                "Visual Studio 2019",
+                "Visual Studio Code",
+                "XCode",
+                "Git"
+            ],
+            "toolHints": [
+                "The primary IDE used for development in C++ after migration.",
+                "The primary IDE used for development in C++ before migration.",
+                "The primary IDE used for JavaScript and Python development.",
+                "The primary IDE used for Swift and iOS development.",
+                "The version control software used."
             ]
         }
     },

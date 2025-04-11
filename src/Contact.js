@@ -6,7 +6,7 @@ function Contact({ data, handleLinkClick }) {
         return <div>Loading...</div>;
     }
 
-    const { email, linkedin, phone } = data.contactInfo;
+    const { email, linkedin, github, phone, phoneLink } = data.contactInfo;
 
     return (
         <div className="container">
@@ -15,20 +15,34 @@ function Contact({ data, handleLinkClick }) {
                 <button 
                     onClick={() => handleLinkClick(`mailto:${email}`)} 
                     className="ResumeButton"
+                    style={{gap: '25px'}} 
                 >
-                    <span className="material-icons">email</span> {email}
+                    <span style={{marginLeft: '25px'}} className="material-icons">email</span>
+                    <p style={{marginRight: '25px', overflow: 'hidden', textOverflow: "ellipsis"}} >{email}</p>
                 </button>
-                <button 
+                <button
                     onClick={() => handleLinkClick(linkedin)} 
                     className="ResumeButton"
+                    style={{gap: '25px'}} 
                 >
-                    <span className="material-icons">groups</span> {linkedin}
+                    <span style={{marginLeft: '25px'}} className="material-icons">groups</span>
+                    <p style={{marginRight: '25px', overflow: 'hidden', textOverflow: "ellipsis"}} >{linkedin}</p>
                 </button>
                 <button 
-                    onClick={() => handleLinkClick(`tel:${phone}`)} 
+                    onClick={() => handleLinkClick(github)} 
                     className="ResumeButton"
+                    style={{gap: '25px', inset: "50px"}} 
                 >
-                    <span className="material-icons">call</span> {phone}
+                    <span style={{marginLeft: '25px'}} className="material-icons">groups</span>
+                    <p style={{marginRight: '25px', overflow: 'hidden', textOverflow: "ellipsis"}} >{github}</p>
+                </button>
+                <button 
+                    onClick={() => handleLinkClick(`tel:${phoneLink}`)} 
+                    className="ResumeButton"
+                    style={{gap: '25px'}} 
+                >
+                    <span style={{marginLeft: '25px'}} className="material-icons">call</span>
+                    <p style={{marginRight: '25px', overflow: 'hidden', textOverflow: "ellipsis"}} >{phone}</p>
                 </button>
             </div>
         </div>
