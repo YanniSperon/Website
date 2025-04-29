@@ -877,13 +877,16 @@
     "Space Science Game": {
         "isPersonal": true,
         "collaborators": [
-            "Volemyu"
+            "Volemyu",
+            "Chris Bisson"
         ],
         "collaboratorHints": [
-            "Developed custom title screen music and helped with audio pre-processing."
+            "Developed custom title screen music and helped with audio pre-processing.",
+            "Game designer and level designer of level 4 (the platformer)."
         ],
         "collaboratorLinks": [
-            "https://linktr.ee/volemyu"
+            "https://linktr.ee/volemyu",
+            "https://chrisbissonportfolio.github.io/"
         ],
         "highlighted": true,
         "thumbnailURL": "https://raw.githubusercontent.com/YanniSperon/Space-Science-Project/f1ad2fcda4cfd98bca3387ae93a178b565b928ed/Media/icon.jpg",
