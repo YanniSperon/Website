@@ -52,7 +52,7 @@ function About({ data, projects, handleLinkClick }) {
                 ))}
             </ul>
 
-            <h2 className="centeredText">Favorite Projects</h2>
+            <h2 className="centeredText spacedText">Favorite Projects</h2>
             <ul>
                 {data.favoriteProjects.map((project, index) => (
                     <li className="centeredText" key={index}>
@@ -61,7 +61,7 @@ function About({ data, projects, handleLinkClick }) {
                 ))}
             </ul>
 
-            <h2 className="centeredText">Ongoing Projects</h2>
+            <h2 className="centeredText spacedText">Ongoing Projects</h2>
             <ul>
                 {data.ongoingProjects.map((project, index) => (
                     <li className="centeredText" key={index}>
@@ -72,7 +72,7 @@ function About({ data, projects, handleLinkClick }) {
                 ))}
             </ul>
             
-            <h2 className="centeredText">Pending Projects</h2>
+            <h2 className="centeredText spacedText">Pending Projects</h2>
             <ul>
                 {data.pendingProjects.map((project, index) => (
                     <li className="centeredText" key={index}>
@@ -83,7 +83,21 @@ function About({ data, projects, handleLinkClick }) {
                 ))}
             </ul>
 
-            <h2 className="centeredText">Resources</h2>
+            <h2 className="centeredText spacedText">Publications & Presentations</h2>
+            <ul>
+                {data.publicationsAndPresentations.map((pubOrPres, index) => (
+                    <li className="centeredText" key={index}>
+                        <button className="publications-link" onClick={() => handleLinkClick(pubOrPres.resource)}>
+                            <div className="publication publicationType">
+                                {pubOrPres.involvement} - {pubOrPres.type}
+                            </div>
+                            {pubOrPres.name}
+                        </button>
+                    </li>
+                ))}
+            </ul>
+
+            <h2 className="centeredText spacedText">Resources</h2>
             <button className="ResumeButton" onClick={() => handleLinkClick("/YanniSperonResume.pdf")}>Download Resume</button>
             <button className="ResumeButton" onClick={() => handleLinkClick("/YanniSperonCoverLetter.pdf")}>Download Cover Letter</button>
 

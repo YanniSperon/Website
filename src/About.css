@@ -19,6 +19,10 @@ body {
     text-align: center;
 }
 
+.spacedText {
+    margin-top: 48px;
+}
+
 h1,
 h2 {
     color: #2c3e50;
@@ -113,6 +117,38 @@ a:hover {
 
 .home-projects-link {
     color: rgb(51, 51, 51);
+}
+
+.publications-link {
+    background: none;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    color: rgb(51, 51, 51);
+}
+
+.publications-link:hover {
+    text-decoration: underline;
+}
+
+.dark-mode .publications-link {
+    color: #bb86fc;
+}
+
+.dark-mode .publications-link:hover {
+    color: rgb(55, 0, 179);
+}
+
+.publication {
+    text-align: center;
+    cursor: inherit;
+    color: inherit;
+}
+
+.publicationType {
+    font-weight: bold;
+    cursor: inherit;
+    color: inherit;
 }
 
 .container {
@@ -250,7 +286,6 @@ a:hover {
     background-color: #555;
 }
 
-/* Dark mode styles */
 .dark-mode body {
     background-color: #121212;
     color: #e0e0e0;

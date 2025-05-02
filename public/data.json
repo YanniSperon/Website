@@ -57,6 +57,14 @@
             "reason": "Learning Background"
         }
     ],
+    "publicationsAndPresentations": [
+        {
+            "name": "Quantitative Assessment of Tongue-Trackpad Device Accuracy Using a CNC-machine",
+            "resource": "/AnnaCarroll-QuantitativeAssessmentOfTongueTrackpadDeviceAccuracyUsingACNCMachine.pdf",
+            "type": "Symposium Presentation",
+            "involvement": "Co-Author"
+        }
+    ],
     "contactInfo": {
         "email": "yannisperon@gmail.com",
         "linkedin": "https://linkedin.com/in/yanni-speron/",
