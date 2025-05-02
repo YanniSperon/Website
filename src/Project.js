@@ -255,15 +255,26 @@ function Project({ projects, handleLinkClick, icons, isDarkMode }) {
                 </div>
             )}
 
-            {/* GitHub link */}
-            {currentVersion.githubURL && (
-                <button
-                    onClick={() => handleLinkClick(currentVersion.githubURL)}
-                    className="github-link"
-                >
-                    {project.isPersonal ? ("View on GitHub") : ("View Company Site")}
-                </button>
-            )}
+            <div className="vertical-button-stack">
+                {/* GitHub link */}
+                {currentVersion.githubURL && (
+                    <button
+                        onClick={() => handleLinkClick(currentVersion.githubURL)}
+                        className="github-link"
+                    >
+                        {project.isPersonal ? ("View on GitHub") : ("View Company Site")}
+                    </button>
+                )}
+                {/* Live Site Link */}
+                {currentVersion.liveURL && (
+                    <button
+                        onClick={() => handleLinkClick(currentVersion.liveURL)}
+                        className="github-link"
+                    >
+                        View Live Website
+                    </button>
+                )}
+            </div>
 
             {/* Project timeline */}
             <DisplayProjectTimeline project={project} currentVersion={currentVersion} isDarkMode={isDarkMode}/>

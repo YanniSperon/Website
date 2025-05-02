@@ -998,6 +998,55 @@
             ]
         }
     },
+    "WebGL Drawer": {
+        "isPersonal": true,
+        "collaborators": [
+        ],
+        "collaboratorHints": [
+        ],
+        "collaboratorLinks": [
+        ],
+        "highlighted": false,
+        "thumbnailURL": "https://yannisperon.github.io/WebGL-Drawer/thumbnail.png",
+        "relatedProjects": [],
+        "relatedProjectHints": [],
+        "Version 1": {
+            "changes": "",
+            "githubURL": "https://github.com/YanniSperon/WebGL-Drawer",
+            "liveURL": "https://yannisperon.github.io/WebGL-Drawer/",
+            "pictureURLs": ["https://yannisperon.github.io/WebGL-Drawer/webglui.png"],
+            "pictureDescriptions": ["A screenshot of the user interface."],
+            "description": "A custom WebGL backend used to allow drawing, originally made for the WTSE laboratory.",
+            "components": [
+                "Extremely efficient WebGL drawing with a cursor",
+                "Swappable framebuffers",
+                "Custom shaders",
+                "Modifiable settings",
+                "Batched point/line generation"
+            ],
+            "projectStart": "2025-01-12",
+            "projectEnd": "2025-01-18",
+            "primaryLanguages": [
+                "JavaScript",
+                "HTML",
+                "CSS"
+            ],
+            "frameworks": [
+                "WebGL"
+            ],
+            "frameworkHints": [
+                "The rendering backend used."
+            ],
+            "tools": [
+                "Visual Studio Code",
+                "Git"
+            ],
+            "toolHints": [
+                "The primary IDE used for development.",
+                "The version control software used."
+            ]
+        }
+    },
     "Smart Bike Helmet": {
         "isPersonal": true,
         "collaborators": [
