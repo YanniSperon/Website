@@ -13,7 +13,7 @@
             "location": "Chicago, IL",
             "startCondition": "Started January 2023",
             "endCondition": "Graduating May 2025",
-            "gpa": "3.70/4.0"
+            "gpa": "3.71/4.0"
         },
         {
             "degree": "Computer Science",
@@ -26,7 +26,6 @@
         }
     ],
     "seeking": [
-        "Full-time software engineering roles in Chicago, IL, starting in May 2025.",
         "Opportunities in high-performance computing, low-latency systems, and large-scale software architecture, leveraging deep expertise in C++ and systems-level programming."
     ],
     "favoriteProjects": [
@@ -54,7 +53,7 @@
     "pendingProjects": [
         {
             "name": "Zeus Quantitative Analysis Engine",
-            "reason": "Learning Background"
+            "reason": "On Hold"
         }
     ],
     "publicationsAndPresentations": [
@@ -66,10 +65,8 @@
         }
     ],
     "contactInfo": {
-        "email": "yannisperon@gmail.com",
+        "email": "ysperon.work@gmail.com",
         "linkedin": "https://linkedin.com/in/yanni-speron/",
-        "github": "https://github.com/YanniSperon",
-        "phone": "+1 (847) 505-9019",
-        "phoneLink": "+18475059019"
+        "github": "https://github.com/YanniSperon"
     }
 }

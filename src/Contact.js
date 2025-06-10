@@ -36,14 +36,6 @@ function Contact({ data, handleLinkClick }) {
                     <span style={{marginLeft: '25px'}} className="material-icons">groups</span>
                     <p style={{marginRight: '25px', overflow: 'hidden', textOverflow: "ellipsis"}} >{github}</p>
                 </button>
-                <button 
-                    onClick={() => handleLinkClick(`tel:${phoneLink}`)} 
-                    className="ResumeButton"
-                    style={{gap: '25px'}} 
-                >
-                    <span style={{marginLeft: '25px'}} className="material-icons">call</span>
-                    <p style={{marginRight: '25px', overflow: 'hidden', textOverflow: "ellipsis"}} >{phone}</p>
-                </button>
             </div>
         </div>
     );
