@@ -1,5 +1,5 @@
 {
-    "Mortal Kombat 1": {
+    "RQD* Clearing": {
         "isPersonal": false,
         "collaborators": [
         ],
@@ -8,48 +8,69 @@
         "collaboratorLinks": [
         ],
         "highlighted": true,
-        "thumbnailURL": "https://cdn2.steamgriddb.com/icon/cad18507f7d4b59d153fbd18e9f5572a.ico",
+        "thumbnailURL": "https://rqdclearing.com/wp-content/uploads/2021/11/RQD_Master_URLPreview_2021-11-24.png",
         "relatedProjects": [
         ],
         "relatedProjectHints": [
         ],
         "positionType": "Full-time",
         "Version 1": {
-            "name": "Junior Associate Software Engineer",
-            "githubURL": "https://www.netherrealm.com/",
+            "name": "Software Engineer",
+            "githubURL": "https://rqdclearing.com/",
             "pictureURLs": [
-                "mkcredits.jpg"
             ],
             "pictureDescriptions": [
-                "A screenshot of the game's credits."
             ],
-            "description": "Worked full-time at a Warner Bros. Games subsidiary, NetherRealm Studios in an Agile environment. Designed new features, debugged systems, and worked alongside industry professionals on a massive C++ codebase in Unreal Engine 4 using JIRA and Perforce to stay organized.",
+            "description": "Developed and maintained ultra-low latency HFT infrastructure around the needs of partner firms. Translated non-technical business requirements into efficient, scalable, and stable technical implementations. Wrote and expanded integration testing infrastructure, CI, and internal tools. Interviewed candidates for technical positions.",
             "components": [
             ],
-            "projectStart": "August 2021",
-            "projectEnd": "June 2022",
+            "projectStart": "June 2025",
+            "projectEnd": "Present",
             "primaryLanguages": [
-                "C++"
+                "C++ 20",
+                "Python 3.11"
             ],
             "frameworks": [
-                "Unreal Engine",
-                "Slate"
+                "C++ STL",
+                "Boost",
+                "GTest",
+                "PyTest",
+                "Solarflare Onload",
+                "MongoDB",
+                "PostgreSQL",
+                "MySQL"
             ],
             "frameworkHints": [
-                "The core game engine the technology is built upon.",
-                "The user interface library used to expand editor functionality."
+                "Where the bulk of standard functionality comes from.",
+                "Used primarily in our legacy code prior to the C++ STL adopting the relevant features.",
+                "The C++ testing framework we use.",
+                "The Python testing framework we use for internal tooling",
+                "The kernel bypass networking library we use.",
+                "The database system we use for short-term storage.",
+                "The database system we use for analysis.",
+                "The databse system we use for long-term storage."
             ],
             "tools": [
-                "Visual Studio 2019",
-                "P4",
-                "Xbox Developer Kit",
-                "Playstation Developer Kit"
+                "RHEL 9",
+                "CentOS 7",
+                "Putty",
+                "Vim",
+                "Visual Studio Code",
+                "Git",
+                "BitBucket",
+                "Confluence",
+                "Jira"
             ],
             "toolHints": [
-                "The primary IDE used for development in C++.",
+                "The Linux distro used.",
+                "The Linux distro migrated from.",
+                "SSH Client used to remote into the linux box.",
+                "Text editor used.",
+                "IDE used.",
                 "The version control software used.",
-                "The hardware used to test the game on Xbox.",
-                "The hardware used to test the game on PS4."
+                "Where we manage our Git remote repositories.",
+                "Our internal documentation and wiki pages.",
+                "Issue/feature tracking and management."
             ]
         }
     },
@@ -117,6 +138,60 @@
                 "The primary IDE used for JavaScript and Python development.",
                 "The primary IDE used for Swift and iOS development.",
                 "The version control software used."
+            ]
+        }
+    },
+    "Mortal Kombat 1": {
+        "isPersonal": false,
+        "collaborators": [
+        ],
+        "collaboratorHints": [
+        ],
+        "collaboratorLinks": [
+        ],
+        "highlighted": true,
+        "thumbnailURL": "https://cdn2.steamgriddb.com/icon/cad18507f7d4b59d153fbd18e9f5572a.ico",
+        "relatedProjects": [
+        ],
+        "relatedProjectHints": [
+        ],
+        "positionType": "Full-time",
+        "Version 1": {
+            "name": "Junior Associate Software Engineer",
+            "githubURL": "https://www.netherrealm.com/",
+            "pictureURLs": [
+                "mkcredits.jpg"
+            ],
+            "pictureDescriptions": [
+                "A screenshot of the game's credits."
+            ],
+            "description": "Worked full-time at a Warner Bros. Games subsidiary, NetherRealm Studios in an Agile environment. Designed new features, debugged systems, and worked alongside industry professionals on a massive C++ codebase in Unreal Engine 4 using JIRA and Perforce to stay organized.",
+            "components": [
+            ],
+            "projectStart": "August 2021",
+            "projectEnd": "June 2022",
+            "primaryLanguages": [
+                "C++"
+            ],
+            "frameworks": [
+                "Unreal Engine",
+                "Slate"
+            ],
+            "frameworkHints": [
+                "The core game engine the technology is built upon.",
+                "The user interface library used to expand editor functionality."
+            ],
+            "tools": [
+                "Visual Studio 2019",
+                "P4",
+                "Xbox Developer Kit",
+                "Playstation Developer Kit"
+            ],
+            "toolHints": [
+                "The primary IDE used for development in C++.",
+                "The version control software used.",
+                "The hardware used to test the game on Xbox.",
+                "The hardware used to test the game on PS4."
             ]
         }
     },
